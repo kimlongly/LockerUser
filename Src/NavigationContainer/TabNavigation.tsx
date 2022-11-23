@@ -46,6 +46,7 @@ export default function TabNavigation() {
       }}>
       <Tabs.Screen
         options={{
+          headerShown: false,
           title: 'Home',
           tabBarIcon: ({focused}) => (
             <CustomTabItem

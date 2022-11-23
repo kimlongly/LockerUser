@@ -1,5 +1,6 @@
 const ScreenConstant = {
   HomeScreeen: 'HomeScreen',
+  SplashScreen: 'SplashScreen',
   Tabs: {
     name: 'Tab',
     Home: 'Home',

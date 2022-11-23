@@ -5,6 +5,8 @@ import HomeActive from './Icons/HomeActive.svg';
 import CameraActive from './Icons/CameraActive.svg';
 import BellActive from './Icons/BellActive.svg';
 import HomaTech from './Icons/HomaTech.svg';
+import Shield from './Icons/Shield.svg';
+import Clock from './Icons/Time.svg';
 
 const IconAssets = {
   Home,
@@ -14,6 +16,8 @@ const IconAssets = {
   CameraActive,
   BellActive,
   HomaTech,
+  Shield,
+  Clock,
 };
 
 export default IconAssets;
