@@ -8,13 +8,15 @@ import ScreenConstant from '../Constant/ScreenConstant';
 import {moderateScale} from 'react-native-size-matters';
 import HomeScreen from '../Screen/HomeScreen/HomeScreen';
 import TabNavigation from './TabNavigation';
+import SplashScreen from '../Screen/SplashScreen/SplashScreen';
 const Stack = createStackNavigator();
 
 export default function RootNavigation() {
   return (
     <NavigationContainer ref={navigationRef}>
       <Stack.Navigator
-        initialRouteName={ScreenConstant.Tabs.name}
+        // initialRouteName={ScreenConstant.Tabs.name}
+        initialRouteName={ScreenConstant.SplashScreen}
         screenOptions={{
           gestureEnabled: false,
           headerTitleAlign: 'center',
@@ -31,6 +33,13 @@ export default function RootNavigation() {
           }}
           name={ScreenConstant.Tabs.name}
           component={TabNavigation}
+        />
+        <Stack.Screen
+          options={{
+            headerShown: false,
+          }}
+          name={ScreenConstant.SplashScreen}
+          component={SplashScreen}
         />
         <Stack.Screen
           name={ScreenConstant.HomeScreeen}
