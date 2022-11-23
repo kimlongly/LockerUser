@@ -14,7 +14,7 @@ export default function RootNavigation() {
   return (
     <NavigationContainer ref={navigationRef}>
       <Stack.Navigator
-        initialRouteName={ScreenConstant.HomeScreeen}
+        initialRouteName={ScreenConstant.Tabs.name}
         screenOptions={{
           gestureEnabled: false,
           headerTitleAlign: 'center',
@@ -26,6 +26,9 @@ export default function RootNavigation() {
           },
         }}>
         <Stack.Screen
+          options={{
+            headerShown: false,
+          }}
           name={ScreenConstant.Tabs.name}
           component={TabNavigation}
         />

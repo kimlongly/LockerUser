@@ -8,6 +8,8 @@ import HomeScreen from '../Screen/HomeScreen/HomeScreen';
 import {Platform} from 'react-native';
 import CustomTabItem from '../Components/CustomTabsItem';
 import IconAssets from '../Assets/IconAssets';
+import DevicesScreen from '../Screen/DevicesScreen/DevicesScreen';
+import ActivityScreen from '../Screen/ActivityScreen/ActivityScreen';
 
 const Tabs = createBottomTabNavigator();
 
@@ -50,10 +52,17 @@ export default function TabNavigation() {
               focused={focused}
               label="Home"
               icon={
-                <IconAssets.Home
-                  width={focused ? moderateScale(30) : moderateScale(25)}
-                  height={focused ? moderateScale(30) : moderateScale(25)}
-                />
+                focused ? (
+                  <IconAssets.HomeActive
+                    width={moderateScale(25)}
+                    height={moderateScale(25)}
+                  />
+                ) : (
+                  <IconAssets.Home
+                    width={moderateScale(25)}
+                    height={moderateScale(25)}
+                  />
+                )
               }
             />
           ),
@@ -61,6 +70,84 @@ export default function TabNavigation() {
         name={ScreenConstant.Tabs.Home}
         component={HomeScreen}
       />
+      <Tabs.Screen
+        options={{
+          title: 'Devices',
+          tabBarIcon: ({focused}) => (
+            <CustomTabItem
+              focused={focused}
+              label="Devices"
+              icon={
+                focused ? (
+                  <IconAssets.CameraActive
+                    width={moderateScale(25)}
+                    height={moderateScale(25)}
+                  />
+                ) : (
+                  <IconAssets.Camera
+                    width={moderateScale(25)}
+                    height={moderateScale(25)}
+                  />
+                )
+              }
+            />
+          ),
+        }}
+        component={DevicesScreen}
+        name={ScreenConstant.Tabs.Devices}
+      />
+      <Tabs.Screen
+        options={{
+          title: 'Devices',
+          tabBarIcon: ({focused}) => (
+            <CustomTabItem
+              focused={focused}
+              label="Activity"
+              icon={
+                focused ? (
+                  <IconAssets.BellActive
+                    width={moderateScale(25)}
+                    height={moderateScale(25)}
+                  />
+                ) : (
+                  <IconAssets.Bell
+                    width={moderateScale(25)}
+                    height={moderateScale(25)}
+                  />
+                )
+              }
+            />
+          ),
+        }}
+        component={ActivityScreen}
+        name={ScreenConstant.Tabs.Activity}
+      />
+      {/* <Tabs.Screen
+        options={{
+          title: 'Devices',
+          tabBarIcon: ({focused}) => (
+            <CustomTabItem
+              focused={focused}
+              label="Devices"
+              icon={
+                focused ? (
+                  <IconAssets.
+                    width={moderateScale(25)}
+                    height={moderateScale(25)}
+                  />
+                ) : (
+                  <IconAssets.Camera
+                    width={moderateScale(25)}
+                    height={moderateScale(25)}
+                  />
+                )
+              }
+            />
+          ),
+        }}
+        component={DevicesScreen}
+        name={ScreenConstant.Tabs.Devices}
+      /> */}
     </Tabs.Navigator>
   );
 }
