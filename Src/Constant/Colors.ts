@@ -20,5 +20,6 @@ const COLORS = {
   lightestGrey: '#F5F1F1',
   inactive: '#C4C4C4',
   expired: '#EEEEEE',
+  blurry: 'rgba(25, 27, 141, 0.2)',
 };
 export default COLORS;
