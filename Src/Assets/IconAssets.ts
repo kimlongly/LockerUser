@@ -14,6 +14,13 @@ import Alert from './Icons/Alert.svg';
 import Moon from './Icons/Moon.svg';
 import Idling from './Icons/Idling.svg';
 import Eye from './Icons/Eye.svg';
+import Play from './Icons/Play.svg';
+import Pause from './Icons/Pause.svg';
+import BackWard from './Icons/Backward.svg';
+import GoBack from './Icons/GoBack.svg';
+import Alarm from './Icons/Alarm.svg';
+import DropDown from './Icons/DropDown.svg';
+import Profile from './Icons/Profile.svg';
 
 const IconAssets = {
   Home,
@@ -32,6 +39,13 @@ const IconAssets = {
   Moon,
   Idling,
   Eye,
+  Play,
+  Pause,
+  BackWard,
+  GoBack,
+  Alarm,
+  DropDown,
+  Profile,
 };
 
 export default IconAssets;

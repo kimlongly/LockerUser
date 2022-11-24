@@ -1,5 +1,5 @@
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
-import React, {useRef} from 'react';
+import React from 'react';
 import FastImage from 'react-native-fast-image';
 import Carousel from 'react-native-reanimated-carousel';
 import {moderateScale} from 'react-native-size-matters';
@@ -13,8 +13,6 @@ import FONTS_SIZE from '../Constant/FontSize';
 const Width = DEVICE.DEVICE_Width;
 
 export default function ActivityCarousel() {
-  const CarouselRef = useRef();
-
   const fakeData: any = [
     {label: 'Cam 1', image: ImageAssets.Interior, room: 'LivingRoom1'},
     {label: 'Cam 2', image: ImageAssets.Interior2, room: 'LivingRoom2'},

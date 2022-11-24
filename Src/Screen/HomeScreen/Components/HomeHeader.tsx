@@ -26,7 +26,7 @@ export default function HomeHeader() {
         </View>
       </View>
       <SizedBox height={moderateScale(10)} />
-      <View style={[styles.innerRow, {paddingHorizontal: moderateScale(10)}]}>
+      <View style={[styles.innerRow]}>
         <IconAssets.Shield
           height={moderateScale(25)}
           width={moderateScale(25)}

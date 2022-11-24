@@ -1,5 +1,6 @@
 const COLORS = {
   primary: '#19388D',
+  ascent: '#CAC6FB',
   buttonPrimary: '#7CC1A8',
   categoy: '#42C293',
   white: '#FFFFFF',
@@ -21,5 +22,6 @@ const COLORS = {
   inactive: '#C4C4C4',
   expired: '#EEEEEE',
   blurry: 'rgba(25, 27, 141, 0.2)',
+  disabled: '#949494',
 };
 export default COLORS;
