@@ -1,4 +1,4 @@
-import {ScrollView, StyleSheet, Text, View} from 'react-native';
+import {ScrollView, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React from 'react';
 import COLORS from '../../Constant/Colors';
 import HomeHeader from './Components/HomeHeader';
@@ -8,6 +8,9 @@ import FONTS_SIZE from '../../Constant/FontSize';
 import ActivityCarousel from '../../Components/ActivityCarousel';
 import ModeHolder from './Components/ModeHolder';
 import IconAssets from '../../Assets/IconAssets';
+import OnboardingScreen from '../OnboardingScreen/OnboardingScreen';
+import NavigationHelper, { navigationRef } from '../../Utils/NavigationHelper';
+import ScreenConstant from '../../Constant/ScreenConstant';
 
 export default function HomeScreen() {
   return (
@@ -46,7 +49,11 @@ export default function HomeScreen() {
           />
         </View>
       </ScrollView>
+      <TouchableOpacity onPress={()=> NavigationHelper.push({name: ScreenConstant.OnboardingScreen}) } style={styles.onboarding}>
+        <Text>Go to Onboarding Screen</Text>
+      </TouchableOpacity>
     </View>
+    
   );
 }
 
@@ -70,4 +77,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     flexDirection: 'row',
   },
+  onboarding:{
+    height: '5%',
+    width: '50%',
+    backgroundColor: COLORS.darkBlue,
+  }
 });
