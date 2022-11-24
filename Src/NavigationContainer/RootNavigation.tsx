@@ -12,6 +12,7 @@ import SplashScreen from '../Screen/SplashScreen/SplashScreen';
 import DeviceDetailScreen from '../Screen/DeviceDetailScreen/DeviceDetailScreen';
 import IconAssets from '../Assets/IconAssets';
 import NavBack from '../Components/NavBack';
+import CheckDeviceScreen from '../Screen/CheckDeviceScreen.tsx/CheckDeviceScreen';
 const Stack = createStackNavigator();
 
 export default function RootNavigation() {
@@ -46,7 +47,7 @@ export default function RootNavigation() {
         />
         <Stack.Screen
           options={{
-            headerTitle: 'Detail',
+            headerTitle: 'Add Device',
             headerLeft: NavBack,
             headerStyle: {
               borderBottomLeftRadius: moderateScale(20),
@@ -56,6 +57,19 @@ export default function RootNavigation() {
           }}
           name={ScreenConstant.DeviceDetailScreen}
           component={DeviceDetailScreen}
+        />
+        <Stack.Screen
+          options={{
+            headerTitle: 'Detail',
+            headerLeft: NavBack,
+            headerStyle: {
+              borderBottomLeftRadius: moderateScale(20),
+              borderBottomRightRadius: moderateScale(20),
+              backgroundColor: COLORS.primary,
+            },
+          }}
+          name={ScreenConstant.CheckDeviceScreen}
+          component={CheckDeviceScreen}
         />
       </Stack.Navigator>
     </NavigationContainer>

@@ -7,9 +7,9 @@ import EachCamera from '../../Components/EachCamera';
 import {SceneMap, TabBar, TabView} from 'react-native-tab-view';
 import DeviceActivity from './Components/DeviceActivity';
 import AddDevice from './Components/AddDevice';
+import ImageAssets from '../../Assets/ImageAssets';
 
-export default function DeviceDetailScreen(props: any) {
-  const {image, room} = props.route.params;
+export default function DeviceDetailScreen() {
   const [index, setIndex] = useState(0);
   const layout = useWindowDimensions();
   const [routes] = useState([
@@ -28,7 +28,7 @@ export default function DeviceDetailScreen(props: any) {
   return (
     <View style={styles.container}>
       <SizedBox height={moderateScale(10)} />
-      <EachCamera image={image} room={room} />
+      <EachCamera image={ImageAssets.Interior} room={''} />
       <SizedBox height={moderateScale(30)} />
       <TabView
         navigationState={{index, routes}}

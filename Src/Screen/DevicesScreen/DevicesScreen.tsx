@@ -12,7 +12,7 @@ import ScreenConstant from '../../Constant/ScreenConstant';
 export default function DevicesScreen() {
   const handleChecking = item => {
     NavigationHelper.navigate({
-      name: ScreenConstant.DeviceDetailScreen,
+      name: ScreenConstant.CheckDeviceScreen,
       params: {
         room: item.room,
         image: item.image,
