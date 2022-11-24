@@ -20,6 +20,7 @@ import BackWard from './Icons/Backward.svg';
 import GoBack from './Icons/GoBack.svg';
 import Alarm from './Icons/Alarm.svg';
 import DropDown from './Icons/DropDown.svg';
+import Profile from './Icons/Profile.svg';
 
 const IconAssets = {
   Home,
@@ -44,6 +45,7 @@ const IconAssets = {
   GoBack,
   Alarm,
   DropDown,
+  Profile,
 };
 
 export default IconAssets;

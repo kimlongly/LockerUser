@@ -10,6 +10,7 @@ import CustomTabItem from '../Components/CustomTabsItem';
 import IconAssets from '../Assets/IconAssets';
 import DevicesScreen from '../Screen/DevicesScreen/DevicesScreen';
 import ActivityScreen from '../Screen/ActivityScreen/ActivityScreen';
+import AccountScreen from '../Screen/AccountScreen/AccountScreen';
 
 const Tabs = createBottomTabNavigator();
 
@@ -24,9 +25,11 @@ export default function TabNavigation() {
           color: COLORS.white,
           fontFamily: FONTS.REGULAR,
         },
+        headerTitleAlign: 'center',
         headerStyle: {
-          borderBottomRightRadius: moderateScale(2),
-          borderBottomLeftRadius: moderateScale(2),
+          height: moderateScale(65),
+          borderBottomRightRadius: moderateScale(20),
+          borderBottomLeftRadius: moderateScale(20),
           backgroundColor: COLORS.primary,
           shadowColor: '#000',
           shadowOffset: {
@@ -104,7 +107,8 @@ export default function TabNavigation() {
       />
       <Tabs.Screen
         options={{
-          title: 'Devices',
+          headerTitle: 'Activity',
+          title: 'Activity',
           tabBarIcon: ({focused}) => (
             <CustomTabItem
               focused={focused}
@@ -128,21 +132,21 @@ export default function TabNavigation() {
         component={ActivityScreen}
         name={ScreenConstant.Tabs.Activity}
       />
-      {/* <Tabs.Screen
+      <Tabs.Screen
         options={{
           title: 'Devices',
           tabBarIcon: ({focused}) => (
             <CustomTabItem
               focused={focused}
-              label="Devices"
+              label="Account"
               icon={
                 focused ? (
-                  <IconAssets.
+                  <IconAssets.Profile
                     width={moderateScale(20)}
                     height={moderateScale(20)}
                   />
                 ) : (
-                  <IconAssets.Camera
+                  <IconAssets.Profile
                     width={moderateScale(20)}
                     height={moderateScale(20)}
                   />
@@ -151,9 +155,9 @@ export default function TabNavigation() {
             />
           ),
         }}
-        component={DevicesScreen}
-        name={ScreenConstant.Tabs.Devices}
-      /> */}
+        component={AccountScreen}
+        name={ScreenConstant.Tabs.Account}
+      />
     </Tabs.Navigator>
   );
 }

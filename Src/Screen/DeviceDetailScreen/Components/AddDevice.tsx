@@ -1,12 +1,130 @@
-import {StyleSheet, Text, View} from 'react-native';
-import React from 'react';
+import {
+  ScrollView,
+  StyleSheet,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View,
+} from 'react-native';
+import React, {useState} from 'react';
+import {moderateScale} from 'react-native-size-matters';
+import COLORS from '../../../Constant/Colors';
+import FONTS_SIZE from '../../../Constant/FontSize';
+import FONTS from '../../../Constant/FontsConstant';
+import SizedBox from '../../../Components/SizedBox';
+import CustomDropDownPicker from '../../../Components/CustomDropDownPicker';
+import {DEVICE} from '../../../Calibration/Device';
+
+const fakeIps = [
+  {label: '192.168.210:220 / 8.8.8.8', key: '1'},
+  {label: '192.168.210:220 / 0.0.0.0', key: '2'},
+];
 
 export default function AddDevice() {
+  const [value, setValue] = useState('');
   return (
-    <View>
-      <Text>AddDevice</Text>
-    </View>
+    <ScrollView style={styles.container}>
+      <View>
+        <Text style={styles.title}>Adding Type</Text>
+        <SizedBox height={moderateScale(10)} />
+        <CustomDropDownPicker
+          items={fakeIps}
+          value={value}
+          setValue={setValue}
+        />
+      </View>
+      <SizedBox height={moderateScale(10)} />
+      <View>
+        <Text style={styles.title}>Allias</Text>
+        <SizedBox height={moderateScale(10)} />
+        <TextInput
+          style={styles.input}
+          placeholder="New Device 01"
+          placeholderTextColor={COLORS.inactive}
+        />
+      </View>
+      <SizedBox height={moderateScale(10)} />
+      <View>
+        <Text style={styles.title}>Address</Text>
+        <SizedBox height={moderateScale(10)} />
+        <TextInput
+          style={styles.input}
+          placeholder="#176c street 10BT, Beong Tumpun"
+          placeholderTextColor={COLORS.inactive}
+        />
+      </View>
+      <SizedBox height={moderateScale(10)} />
+      <View>
+        <Text style={styles.title}>Port</Text>
+        <SizedBox height={moderateScale(10)} />
+        <TextInput
+          style={styles.input}
+          placeholder="8000"
+          placeholderTextColor={COLORS.inactive}
+        />
+      </View>
+      <SizedBox height={moderateScale(10)} />
+      <View>
+        <Text style={styles.title}>Password</Text>
+        <SizedBox height={moderateScale(10)} />
+        <TextInput
+          style={styles.input}
+          placeholder="Qwerty!23456"
+          placeholderTextColor={COLORS.inactive}
+        />
+      </View>
+      <SizedBox height={moderateScale(10)} />
+      <TouchableOpacity style={styles.addButton}>
+        <Text style={styles.buttonText}>Add Device</Text>
+      </TouchableOpacity>
+      <SizedBox height={moderateScale(20)} />
+    </ScrollView>
   );
 }
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {
+    paddingHorizontal: moderateScale(20),
+    paddingVertical: moderateScale(10),
+    marginTop: moderateScale(10),
+  },
+  title: {
+    color: COLORS.disabled,
+    fontSize: FONTS_SIZE.font14,
+    fontWeight: '700',
+    letterSpacing: moderateScale(0.5),
+  },
+  input: {
+    width: '99%',
+    alignSelf: 'center',
+    elevation: 1,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
+    shadowOpacity: 0.22,
+    shadowRadius: 2.22,
+    backgroundColor: COLORS.white,
+    borderRadius: moderateScale(15),
+    paddingVertical: moderateScale(10),
+    paddingHorizontal: moderateScale(15),
+    color: COLORS.commonText,
+    fontSize: FONTS_SIZE.font14,
+    fontWeight: '700',
+  },
+  addButton: {
+    alignSelf: 'center',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: COLORS.primary,
+    borderRadius: moderateScale(15),
+    width: DEVICE.DEVICE_Width / 2,
+    height: DEVICE.DEVICE_Width / 8,
+  },
+  buttonText: {
+    color: COLORS.white,
+    fontSize: FONTS_SIZE.font14,
+    fontWeight: '600',
+  },
+});

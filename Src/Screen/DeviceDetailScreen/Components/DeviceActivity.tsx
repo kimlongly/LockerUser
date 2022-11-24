@@ -57,6 +57,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginBottom: moderateScale(10),
     backgroundColor: COLORS.ascent,
+    elevation: 1,
   },
   whiteHolder: {
     padding: moderateScale(10),
