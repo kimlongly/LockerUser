@@ -1,6 +1,6 @@
 import Homatic from './Images/Homatic.png';
-import Interior from './Images/Interior.png';
-import Interior2 from './Images/Interior2.png';
+import Interior from './Images/Interior.jpeg';
+import Interior2 from './Images/Interior2.jpeg';
 
 const ImageAssets = {
   Homatic,
