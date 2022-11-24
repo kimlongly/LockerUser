@@ -50,7 +50,7 @@ export default function HomeScreen() {
         </View>
         <SizedBox height={moderateScale(20)}/>
       </ScrollView>
-      
+
     </View>
     
   );

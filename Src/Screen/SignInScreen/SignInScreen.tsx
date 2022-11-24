@@ -54,7 +54,10 @@ export default function SignInScreen() {
       </TouchableOpacity>
       <SizedBox height={moderateScale(35)} />
       <View style={{ alignItems: 'center', width: '100%', height: moderateScale(40)}}>
+
     <TouchableOpacity style={styles.buttonStyle} onPress={() => NavigationHelper.reset({name: ScreenConstant.Tabs.name})}>
+
+  
           <Text style={styles.buttonFont}>Sign In</Text>
         </TouchableOpacity>
         </View>
