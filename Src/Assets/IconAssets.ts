@@ -21,6 +21,11 @@ import GoBack from './Icons/GoBack.svg';
 import Alarm from './Icons/Alarm.svg';
 import DropDown from './Icons/DropDown.svg';
 import Profile from './Icons/Profile.svg';
+import Onboarding from './Icons/Onboarding.svg';
+import Facebook from './Icons/facebook.svg';
+import Google from './Icons/google.svg';
+import Apple from './Icons/apple.svg';
+import NavBack from './Icons/navback.svg';
 
 const IconAssets = {
   Home,
@@ -46,6 +51,11 @@ const IconAssets = {
   Alarm,
   DropDown,
   Profile,
+  Onboarding,
+  Facebook,
+  Google,
+  Apple,
+  NavBack,
 };
 
 export default IconAssets;

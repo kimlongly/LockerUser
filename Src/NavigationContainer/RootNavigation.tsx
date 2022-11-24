@@ -13,6 +13,9 @@ import DeviceDetailScreen from '../Screen/DeviceDetailScreen/DeviceDetailScreen'
 import IconAssets from '../Assets/IconAssets';
 import NavBack from '../Components/NavBack';
 import CheckDeviceScreen from '../Screen/CheckDeviceScreen.tsx/CheckDeviceScreen';
+import OnboardingScreen from '../Screen/OnboardingScreen/OnboardingScreen';
+import SignInScreen from '../Screen/SignInScreen/SignInScreen';
+import SignUpScreen from '../Screen/SignInScreen/SignUpScreen';
 const Stack = createStackNavigator();
 
 export default function RootNavigation() {
@@ -45,6 +48,27 @@ export default function RootNavigation() {
           name={ScreenConstant.SplashScreen}
           component={SplashScreen}
         />
+       <Stack.Screen 
+          options={{
+            headerShown:false,
+          }}
+          name={ScreenConstant.OnboardingScreen}
+          component={OnboardingScreen}
+       />
+       <Stack.Screen 
+          options={{
+            headerShown:false,
+          }}
+          name={ScreenConstant.SignInScreen}
+          component={SignInScreen}
+       />
+       <Stack.Screen 
+          options={{
+            headerShown:false,
+          }}
+          name={ScreenConstant.SignUpScreen}
+          component={SignUpScreen}
+       />
         <Stack.Screen
           options={{
             headerTitle: 'Add Device',
