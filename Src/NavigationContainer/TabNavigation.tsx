@@ -40,8 +40,12 @@ export default function TabNavigation() {
         },
         tabBarShowLabel: false,
         tabBarStyle: {
+          elevation: 0,
+          borderTopLeftRadius: moderateScale(20),
+          borderTopRightRadius: moderateScale(20),
           height: Platform.OS === 'ios' ? 75 : 60,
           backgroundColor: '#FFFFFF',
+          shadowColor: '#FFFFFF',
         },
       }}>
       <Tabs.Screen
@@ -55,13 +59,13 @@ export default function TabNavigation() {
               icon={
                 focused ? (
                   <IconAssets.HomeActive
-                    width={moderateScale(25)}
-                    height={moderateScale(25)}
+                    width={moderateScale(20)}
+                    height={moderateScale(20)}
                   />
                 ) : (
                   <IconAssets.Home
-                    width={moderateScale(25)}
-                    height={moderateScale(25)}
+                    width={moderateScale(20)}
+                    height={moderateScale(20)}
                   />
                 )
               }
@@ -73,6 +77,7 @@ export default function TabNavigation() {
       />
       <Tabs.Screen
         options={{
+          headerShown: false,
           title: 'Devices',
           tabBarIcon: ({focused}) => (
             <CustomTabItem
@@ -81,13 +86,13 @@ export default function TabNavigation() {
               icon={
                 focused ? (
                   <IconAssets.CameraActive
-                    width={moderateScale(25)}
-                    height={moderateScale(25)}
+                    width={moderateScale(20)}
+                    height={moderateScale(20)}
                   />
                 ) : (
                   <IconAssets.Camera
-                    width={moderateScale(25)}
-                    height={moderateScale(25)}
+                    width={moderateScale(20)}
+                    height={moderateScale(20)}
                   />
                 )
               }
@@ -107,13 +112,13 @@ export default function TabNavigation() {
               icon={
                 focused ? (
                   <IconAssets.BellActive
-                    width={moderateScale(25)}
-                    height={moderateScale(25)}
+                    width={moderateScale(20)}
+                    height={moderateScale(20)}
                   />
                 ) : (
                   <IconAssets.Bell
-                    width={moderateScale(25)}
-                    height={moderateScale(25)}
+                    width={moderateScale(20)}
+                    height={moderateScale(20)}
                   />
                 )
               }
@@ -133,13 +138,13 @@ export default function TabNavigation() {
               icon={
                 focused ? (
                   <IconAssets.
-                    width={moderateScale(25)}
-                    height={moderateScale(25)}
+                    width={moderateScale(20)}
+                    height={moderateScale(20)}
                   />
                 ) : (
                   <IconAssets.Camera
-                    width={moderateScale(25)}
-                    height={moderateScale(25)}
+                    width={moderateScale(20)}
+                    height={moderateScale(20)}
                   />
                 )
               }

@@ -9,6 +9,9 @@ import {moderateScale} from 'react-native-size-matters';
 import HomeScreen from '../Screen/HomeScreen/HomeScreen';
 import TabNavigation from './TabNavigation';
 import SplashScreen from '../Screen/SplashScreen/SplashScreen';
+import DeviceDetailScreen from '../Screen/DeviceDetailScreen/DeviceDetailScreen';
+import IconAssets from '../Assets/IconAssets';
+import NavBack from '../Components/NavBack';
 const Stack = createStackNavigator();
 
 export default function RootNavigation() {
@@ -42,8 +45,17 @@ export default function RootNavigation() {
           component={SplashScreen}
         />
         <Stack.Screen
-          name={ScreenConstant.HomeScreeen}
-          component={HomeScreen}
+          options={{
+            headerTitle: 'Detail',
+            headerLeft: NavBack,
+            headerStyle: {
+              borderBottomLeftRadius: moderateScale(20),
+              borderBottomRightRadius: moderateScale(20),
+              backgroundColor: COLORS.primary,
+            },
+          }}
+          name={ScreenConstant.DeviceDetailScreen}
+          component={DeviceDetailScreen}
         />
       </Stack.Navigator>
     </NavigationContainer>
