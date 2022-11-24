@@ -145,6 +145,6 @@ const styles = StyleSheet.create({
   roomText: {
     fontSize: FONTS_SIZE.font14,
     fontWeight: '600',
-    color: COLORS.primary,
+    color: COLORS.white,
   },
 });
