@@ -1,6 +1,9 @@
 const ScreenConstant = {
-  HomeScreeen: 'HomeScreen',
   SplashScreen: 'SplashScreen',
+  OnboardingScreen: 'OnboardingScreen',
+  SignInScreen: 'SignInScreen',
+  SignUpScreen: 'SignUpScreen',
+  HomeScreeen: 'HomeScreen',
   DeviceDetailScreen: 'DeviceDetailScreen',
   CheckDeviceScreen: 'CheckDeviceScreen',
   OnboardingScreen: 'OnboardingScreen',

@@ -11,10 +11,10 @@ import ScreenConstant from '../../Constant/ScreenConstant';
 export default function SplashScreen() {
   useEffect(() => {
     setTimeout(() => {
-      NavigationHelper.reset({name: ScreenConstant.Tabs.name});
+      NavigationHelper.reset({name: ScreenConstant.OnboardingScreen});
     }, 1000);
   }, []);
-
+  
   return (
     <View style={styles.container}>
       <View style={styles.iconContainer}>

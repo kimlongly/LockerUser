@@ -132,7 +132,7 @@ export default function TabNavigation() {
         component={ActivityScreen}
         name={ScreenConstant.Tabs.Activity}
       />
-      <Tabs.Screen
+      {/* <Tabs.Screen
         options={{
           title: 'Devices',
           tabBarIcon: ({focused}) => (
@@ -157,7 +157,7 @@ export default function TabNavigation() {
         }}
         component={AccountScreen}
         name={ScreenConstant.Tabs.Account}
-      />
+      /> */}
     </Tabs.Navigator>
   );
 }

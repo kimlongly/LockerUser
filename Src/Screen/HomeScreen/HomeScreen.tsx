@@ -48,10 +48,9 @@ export default function HomeScreen() {
             enabled={false}
           />
         </View>
+        <SizedBox height={moderateScale(20)}/>
       </ScrollView>
-      <TouchableOpacity onPress={()=> NavigationHelper.push({name: ScreenConstant.OnboardingScreen}) } style={styles.onboarding}>
-        <Text>Go to Onboarding Screen</Text>
-      </TouchableOpacity>
+
     </View>
     
   );
