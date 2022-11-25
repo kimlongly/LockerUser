@@ -7,7 +7,11 @@ import FONTS_SIZE from '../../../Constant/FontSize';
 import NavigationHelper from '../../../Utils/NavigationHelper';
 import ScreenConstant from '../../../Constant/ScreenConstant';
 
-export default function DeviceScreenHeader() {
+interface Devicesprops {
+  Devices: number;
+}
+
+export default function DeviceScreenHeader({Devices}: Devicesprops) {
   const addADevice = () => {
     NavigationHelper.navigate({name: ScreenConstant.DeviceDetailScreen});
   };
@@ -16,7 +20,7 @@ export default function DeviceScreenHeader() {
       <View>
         <Text style={styles.title}>Devices</Text>
         <SizedBox height={moderateScale(5)} />
-        <Text style={styles.deviceText}>4 active Devices</Text>
+        <Text style={styles.deviceText}>{Devices || 0} active Devices</Text>
       </View>
       <TouchableOpacity style={styles.addButton} onPress={addADevice}>
         <Text style={styles.addIndicator}>+</Text>

@@ -8,8 +8,9 @@ import {moderateScale} from 'react-native-size-matters';
 import SizedBox from '../../Components/SizedBox';
 import NavigationHelper from '../../Utils/NavigationHelper';
 import ScreenConstant from '../../Constant/ScreenConstant';
+import {connect} from 'react-redux';
 
-export default function DevicesScreen() {
+const DevicesScreen = (props: any) => {
   const handleChecking = item => {
     NavigationHelper.navigate({
       name: ScreenConstant.CheckDeviceScreen,
@@ -37,16 +38,25 @@ export default function DevicesScreen() {
 
   return (
     <View style={styles.container}>
-      <DeviceScreenHeader />
+      <DeviceScreenHeader Devices={props.data.length} />
       <FlatList
         ItemSeparatorComponent={() => <SizedBox height={moderateScale(10)} />}
-        data={fakeData}
+        data={props.data}
         keyExtractor={item => item.label}
         renderItem={renderItem}
       />
     </View>
   );
-}
+};
+
+const mapStateToProp = (state: any) => {
+  const {data} = state.Camera;
+  return {
+    data,
+  };
+};
+
+export default connect(mapStateToProp)(DevicesScreen);
 
 const styles = StyleSheet.create({
   container: {

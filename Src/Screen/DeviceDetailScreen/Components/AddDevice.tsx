@@ -10,18 +10,29 @@ import React, {useState} from 'react';
 import {moderateScale} from 'react-native-size-matters';
 import COLORS from '../../../Constant/Colors';
 import FONTS_SIZE from '../../../Constant/FontSize';
-import FONTS from '../../../Constant/FontsConstant';
 import SizedBox from '../../../Components/SizedBox';
 import CustomDropDownPicker from '../../../Components/CustomDropDownPicker';
 import {DEVICE} from '../../../Calibration/Device';
+import {connect} from 'react-redux';
+import {handleAddCamera} from '../../../Redux/Cameras/actions';
+import ImageAssets from '../../../Assets/ImageAssets';
 
 const fakeIps = [
   {label: '192.168.210:220 / 8.8.8.8', key: '1'},
   {label: '192.168.210:220 / 0.0.0.0', key: '2'},
 ];
-
-export default function AddDevice() {
+const AddDevice = (props: any) => {
   const [value, setValue] = useState('');
+  const [room, setRoom] = useState('');
+
+  const addCamera = () => {
+    const body = {
+      room: room,
+      image: ImageAssets.Interior,
+    };
+    props.handleAddCamera(body, props.data);
+  };
+
   return (
     <ScrollView style={styles.container}>
       <View>
@@ -38,6 +49,8 @@ export default function AddDevice() {
         <Text style={styles.title}>Allias</Text>
         <SizedBox height={moderateScale(10)} />
         <TextInput
+          value={room}
+          onChangeText={inp => setRoom(inp)}
           style={styles.input}
           placeholder="New Device 01"
           placeholderTextColor={COLORS.inactive}
@@ -74,13 +87,27 @@ export default function AddDevice() {
         />
       </View>
       <SizedBox height={moderateScale(10)} />
-      <TouchableOpacity style={styles.addButton}>
+      <TouchableOpacity style={styles.addButton} onPress={addCamera}>
         <Text style={styles.buttonText}>Add Device</Text>
       </TouchableOpacity>
       <SizedBox height={moderateScale(20)} />
     </ScrollView>
   );
-}
+};
+
+const mapDispatchToProp = {
+  handleAddCamera,
+};
+
+const mapStateToProp = (state: any) => {
+  const {loading, data} = state.Camera;
+  return {
+    loading,
+    data,
+  };
+};
+
+export default connect(mapStateToProp, mapDispatchToProp)(AddDevice);
 
 const styles = StyleSheet.create({
   container: {
