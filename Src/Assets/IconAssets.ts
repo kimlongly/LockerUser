@@ -26,8 +26,18 @@ import Facebook from './Icons/facebook.svg';
 import Google from './Icons/google.svg';
 import Apple from './Icons/apple.svg';
 import NavBack from './Icons/navback.svg';
+import HomatechWhite from './Icons/HomatechWhite.svg';
+import ServiceIcons from './Icons/ServiceIcons.svg';
+import Setting from './Icons/setting.svg';
+import myAddress from './Icons/myAddress.svg';
+import location from './Icons/location.svg';
+import ChatLive from './Icons/ChatLive.svg';
 
 const IconAssets = {
+  ServiceIcons,
+  Setting,
+  myAddress,
+  location,
   Home,
   Camera,
   Bell,
@@ -56,6 +66,8 @@ const IconAssets = {
   Google,
   Apple,
   NavBack,
+  HomatechWhite,
+  ChatLive,
 };
 
 export default IconAssets;
