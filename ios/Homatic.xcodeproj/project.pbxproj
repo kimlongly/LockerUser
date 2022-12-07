@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E356F31AD99517003FC87E /* HomaticTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* HomaticTests.m */; };
-		12C7AFCEC31BE1F3D8908FB1 /* libPods-Homatic-HomaticTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EFA0E7781AA3F9156879F4AA /* libPods-Homatic-HomaticTests.a */; };
+		00E356F31AD99517003FC87E /* TemplateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* TemplateTests.m */; };
+		12C7AFCEC31BE1F3D8908FB1 /* libPods-Template-TemplateTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EFA0E7781AA3F9156879F4AA /* libPods-Template-TemplateTests.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		14CBFA895FF8E10B710FA452 /* libPods-Homatic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 292355BC7B505019F15EE173 /* libPods-Homatic.a */; };
+		14CBFA895FF8E10B710FA452 /* libPods-Template.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 292355BC7B505019F15EE173 /* libPods-Template.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -22,28 +22,28 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = Homatic;
+			remoteInfo = Template;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00E356EE1AD99517003FC87E /* HomaticTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HomaticTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* TemplateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TemplateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* HomaticTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomaticTests.m; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* Homatic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homatic.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Homatic/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = Homatic/AppDelegate.mm; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Homatic/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Homatic/Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Homatic/main.m; sourceTree = "<group>"; };
-		292355BC7B505019F15EE173 /* libPods-Homatic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Homatic.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Homatic/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		9A34F346700CDBE9377686E2 /* Pods-Homatic-HomaticTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Homatic-HomaticTests.debug.xcconfig"; path = "Target Support Files/Pods-Homatic-HomaticTests/Pods-Homatic-HomaticTests.debug.xcconfig"; sourceTree = "<group>"; };
-		9ACB3DAB217D651B81E0C277 /* Pods-Homatic-HomaticTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Homatic-HomaticTests.release.xcconfig"; path = "Target Support Files/Pods-Homatic-HomaticTests/Pods-Homatic-HomaticTests.release.xcconfig"; sourceTree = "<group>"; };
-		A1E610A5520FC9F6675D088C /* Pods-Homatic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Homatic.debug.xcconfig"; path = "Target Support Files/Pods-Homatic/Pods-Homatic.debug.xcconfig"; sourceTree = "<group>"; };
-		C3FD5CAB07EEFB0203415A85 /* Pods-Homatic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Homatic.release.xcconfig"; path = "Target Support Files/Pods-Homatic/Pods-Homatic.release.xcconfig"; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* TemplateTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TemplateTests.m; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* Template.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Template.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Template/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = Template/AppDelegate.mm; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Template/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Template/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Template/main.m; sourceTree = "<group>"; };
+		292355BC7B505019F15EE173 /* libPods-Template.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Template.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Template/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9A34F346700CDBE9377686E2 /* Pods-Template-TemplateTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Template-TemplateTests.debug.xcconfig"; path = "Target Support Files/Pods-Template-TemplateTests/Pods-Template-TemplateTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9ACB3DAB217D651B81E0C277 /* Pods-Template-TemplateTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Template-TemplateTests.release.xcconfig"; path = "Target Support Files/Pods-Template-TemplateTests/Pods-Template-TemplateTests.release.xcconfig"; sourceTree = "<group>"; };
+		A1E610A5520FC9F6675D088C /* Pods-Template.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Template.debug.xcconfig"; path = "Target Support Files/Pods-Template/Pods-Template.debug.xcconfig"; sourceTree = "<group>"; };
+		C3FD5CAB07EEFB0203415A85 /* Pods-Template.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Template.release.xcconfig"; path = "Target Support Files/Pods-Template/Pods-Template.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		EFA0E7781AA3F9156879F4AA /* libPods-Homatic-HomaticTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Homatic-HomaticTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFA0E7781AA3F9156879F4AA /* libPods-Template-TemplateTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Template-TemplateTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				12C7AFCEC31BE1F3D8908FB1 /* libPods-Homatic-HomaticTests.a in Frameworks */,
+				12C7AFCEC31BE1F3D8908FB1 /* libPods-Template-TemplateTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,20 +59,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14CBFA895FF8E10B710FA452 /* libPods-Homatic.a in Frameworks */,
+				14CBFA895FF8E10B710FA452 /* libPods-Template.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00E356EF1AD99517003FC87E /* HomaticTests */ = {
+		00E356EF1AD99517003FC87E /* TemplateTests */ = {
 			isa = PBXGroup;
 			children = (
-				00E356F21AD99517003FC87E /* HomaticTests.m */,
+				00E356F21AD99517003FC87E /* TemplateTests.m */,
 				00E356F01AD99517003FC87E /* Supporting Files */,
 			);
-			path = HomaticTests;
+			path = TemplateTests;
 			sourceTree = "<group>";
 		};
 		00E356F01AD99517003FC87E /* Supporting Files */ = {
@@ -83,7 +83,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		13B07FAE1A68108700A75B9A /* Homatic */ = {
+		13B07FAE1A68108700A75B9A /* Template */ = {
 			isa = PBXGroup;
 			children = (
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
@@ -93,15 +93,15 @@
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
-			name = Homatic;
+			name = Template;
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				292355BC7B505019F15EE173 /* libPods-Homatic.a */,
-				EFA0E7781AA3F9156879F4AA /* libPods-Homatic-HomaticTests.a */,
+				292355BC7B505019F15EE173 /* libPods-Template.a */,
+				EFA0E7781AA3F9156879F4AA /* libPods-Template-TemplateTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -116,9 +116,9 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				13B07FAE1A68108700A75B9A /* Homatic */,
+				13B07FAE1A68108700A75B9A /* Template */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* HomaticTests */,
+				00E356EF1AD99517003FC87E /* TemplateTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
@@ -131,8 +131,8 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* Homatic.app */,
-				00E356EE1AD99517003FC87E /* HomaticTests.xctest */,
+				13B07F961A680F5B00A75B9A /* Template.app */,
+				00E356EE1AD99517003FC87E /* TemplateTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -140,10 +140,10 @@
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				A1E610A5520FC9F6675D088C /* Pods-Homatic.debug.xcconfig */,
-				C3FD5CAB07EEFB0203415A85 /* Pods-Homatic.release.xcconfig */,
-				9A34F346700CDBE9377686E2 /* Pods-Homatic-HomaticTests.debug.xcconfig */,
-				9ACB3DAB217D651B81E0C277 /* Pods-Homatic-HomaticTests.release.xcconfig */,
+				A1E610A5520FC9F6675D088C /* Pods-Template.debug.xcconfig */,
+				C3FD5CAB07EEFB0203415A85 /* Pods-Template.release.xcconfig */,
+				9A34F346700CDBE9377686E2 /* Pods-Template-TemplateTests.debug.xcconfig */,
+				9ACB3DAB217D651B81E0C277 /* Pods-Template-TemplateTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -151,9 +151,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* HomaticTests */ = {
+		00E356ED1AD99517003FC87E /* TemplateTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "HomaticTests" */;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "TemplateTests" */;
 			buildPhases = (
 				FBC870143FB2FF977520F6FB /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
@@ -167,14 +167,14 @@
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
-			name = HomaticTests;
-			productName = HomaticTests;
-			productReference = 00E356EE1AD99517003FC87E /* HomaticTests.xctest */;
+			name = TemplateTests;
+			productName = TemplateTests;
+			productReference = 00E356EE1AD99517003FC87E /* TemplateTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		13B07F861A680F5B00A75B9A /* Homatic */ = {
+		13B07F861A680F5B00A75B9A /* Template */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Homatic" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Template" */;
 			buildPhases = (
 				4E72D8553EF2609A492096CE /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
@@ -189,9 +189,9 @@
 			);
 			dependencies = (
 			);
-			name = Homatic;
-			productName = Homatic;
-			productReference = 13B07F961A680F5B00A75B9A /* Homatic.app */;
+			name = Template;
+			productName = Template;
+			productReference = 13B07F961A680F5B00A75B9A /* Template.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -211,7 +211,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Homatic" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Template" */;
 			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -224,8 +224,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* Homatic */,
-				00E356ED1AD99517003FC87E /* HomaticTests */,
+				13B07F861A680F5B00A75B9A /* Template */,
+				00E356ED1AD99517003FC87E /* TemplateTests */,
 			);
 		};
 /* End PBXProject section */
@@ -281,7 +281,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Homatic-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Template-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -294,15 +294,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Homatic/Pods-Homatic-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Template/Pods-Template-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Homatic/Pods-Homatic-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Template/Pods-Template-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Homatic/Pods-Homatic-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Template/Pods-Template-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C8D2B2DC3B68F952847B62D0 /* [CP] Embed Pods Frameworks */ = {
@@ -311,15 +311,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Homatic/Pods-Homatic-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Template/Pods-Template-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Homatic/Pods-Homatic-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Template/Pods-Template-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Homatic/Pods-Homatic-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Template/Pods-Template-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EFA3808024A2F7F736FB2F6E /* [CP] Embed Pods Frameworks */ = {
@@ -328,15 +328,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Homatic-HomaticTests/Pods-Homatic-HomaticTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Template-TemplateTests/Pods-Template-TemplateTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Homatic-HomaticTests/Pods-Homatic-HomaticTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Template-TemplateTests/Pods-Template-TemplateTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Homatic-HomaticTests/Pods-Homatic-HomaticTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Template-TemplateTests/Pods-Template-TemplateTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EFCC5F9CD40975247A85B522 /* [CP] Copy Pods Resources */ = {
@@ -345,15 +345,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Homatic-HomaticTests/Pods-Homatic-HomaticTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Template-TemplateTests/Pods-Template-TemplateTests-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Homatic-HomaticTests/Pods-Homatic-HomaticTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Template-TemplateTests/Pods-Template-TemplateTests-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Homatic-HomaticTests/Pods-Homatic-HomaticTests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Template-TemplateTests/Pods-Template-TemplateTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FBC870143FB2FF977520F6FB /* [CP] Check Pods Manifest.lock */ = {
@@ -371,7 +371,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Homatic-HomaticTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Template-TemplateTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -404,7 +404,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E356F31AD99517003FC87E /* HomaticTests.m in Sources */,
+				00E356F31AD99517003FC87E /* TemplateTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,7 +422,7 @@
 /* Begin PBXTargetDependency section */
 		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* Homatic */;
+			target = 13B07F861A680F5B00A75B9A /* Template */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -430,14 +430,14 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9A34F346700CDBE9377686E2 /* Pods-Homatic-HomaticTests.debug.xcconfig */;
+			baseConfigurationReference = 9A34F346700CDBE9377686E2 /* Pods-Template-TemplateTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = HomaticTests/Info.plist;
+				INFOPLIST_FILE = TemplateTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -451,17 +451,17 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Homatic.app/Homatic";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Template.app/Template";
 			};
 			name = Debug;
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9ACB3DAB217D651B81E0C277 /* Pods-Homatic-HomaticTests.release.xcconfig */;
+			baseConfigurationReference = 9ACB3DAB217D651B81E0C277 /* Pods-Template-TemplateTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
-				INFOPLIST_FILE = HomaticTests/Info.plist;
+				INFOPLIST_FILE = TemplateTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -475,19 +475,19 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Homatic.app/Homatic";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Template.app/Template";
 			};
 			name = Release;
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A1E610A5520FC9F6675D088C /* Pods-Homatic.debug.xcconfig */;
+			baseConfigurationReference = A1E610A5520FC9F6675D088C /* Pods-Template.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_BITCODE = NO;
-				INFOPLIST_FILE = Homatic/Info.plist;
+				INFOPLIST_FILE = Template/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -498,7 +498,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = Homatic;
+				PRODUCT_NAME = Template;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -507,12 +507,12 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C3FD5CAB07EEFB0203415A85 /* Pods-Homatic.release.xcconfig */;
+			baseConfigurationReference = C3FD5CAB07EEFB0203415A85 /* Pods-Template.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				INFOPLIST_FILE = Homatic/Info.plist;
+				INFOPLIST_FILE = Template/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -523,7 +523,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = Homatic;
+				PRODUCT_NAME = Template;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -669,7 +669,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "HomaticTests" */ = {
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "TemplateTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
@@ -678,7 +678,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Homatic" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Template" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -687,7 +687,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Homatic" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Template" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,
