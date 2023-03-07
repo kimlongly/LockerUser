@@ -1,4 +1,10 @@
-import {ScrollView, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {
+  ScrollView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import React from 'react';
 import COLORS from '../../Constant/Colors';
 import HomeHeader from './Components/HomeHeader';
@@ -9,50 +15,15 @@ import ActivityCarousel from '../../Components/ActivityCarousel';
 import ModeHolder from './Components/ModeHolder';
 import IconAssets from '../../Assets/IconAssets';
 import OnboardingScreen from '../OnboardingScreen/OnboardingScreen';
-import NavigationHelper, { navigationRef } from '../../Utils/NavigationHelper';
+import NavigationHelper, {navigationRef} from '../../Utils/NavigationHelper';
 import ScreenConstant from '../../Constant/ScreenConstant';
+import FONTS from '../../Constant/FontsConstant';
 
 export default function HomeScreen() {
   return (
     <View style={styles.container}>
-      <HomeHeader />
-      <ScrollView style={styles.content}>
-        <Text style={styles.title}>Live Feed</Text>
-        <SizedBox height={moderateScale(10)} />
-        <ActivityCarousel />
-        <SizedBox height={moderateScale(10)} />
-        <Text style={styles.title}>Mode</Text>
-        <SizedBox height={moderateScale(10)} />
-        <View style={styles.rowView}>
-          <ModeHolder
-            label="High Alert"
-            icon={<IconAssets.Alert />}
-            enabled={true}
-          />
-          <ModeHolder
-            label="Night Time"
-            icon={<IconAssets.Moon />}
-            enabled={true}
-          />
-        </View>
-        <SizedBox height={moderateScale(10)} />
-        <View style={styles.rowView}>
-          <ModeHolder
-            label="Monitor"
-            icon={<IconAssets.Eye />}
-            enabled={false}
-          />
-          <ModeHolder
-            label="Idle"
-            icon={<IconAssets.Idling />}
-            enabled={false}
-          />
-        </View>
-        <SizedBox height={moderateScale(20)}/>
-      </ScrollView>
-
+      <Text style={styles.title}>Hello HomeScreen</Text>
     </View>
-    
   );
 }
 
@@ -68,7 +39,7 @@ const styles = StyleSheet.create({
   },
   title: {
     color: COLORS.primary,
-    fontWeight: '700',
+    fontFamily: FONTS.BOLD,
     fontSize: FONTS_SIZE.font16,
   },
   rowView: {
@@ -76,9 +47,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     flexDirection: 'row',
   },
-  onboarding:{
+  onboarding: {
     height: '5%',
     width: '50%',
     backgroundColor: COLORS.darkBlue,
-  }
+  },
 });
