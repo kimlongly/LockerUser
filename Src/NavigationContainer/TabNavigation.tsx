@@ -7,7 +7,6 @@ import {moderateScale} from 'react-native-size-matters';
 import HomeScreen from '../Screen/HomeScreen/HomeScreen';
 import {Platform} from 'react-native';
 import CustomTabItem from '../Components/CustomTabsItem';
-import IconAssets from '../Assets/IconAssets';
 
 const Tabs = createBottomTabNavigator();
 
@@ -52,25 +51,6 @@ export default function TabNavigation() {
         options={{
           headerShown: false,
           title: 'Home',
-          tabBarIcon: ({focused}) => (
-            <CustomTabItem
-              focused={focused}
-              label="Home"
-              icon={
-                focused ? (
-                  <IconAssets.HomeActive
-                    width={moderateScale(20)}
-                    height={moderateScale(20)}
-                  />
-                ) : (
-                  <IconAssets.Home
-                    width={moderateScale(20)}
-                    height={moderateScale(20)}
-                  />
-                )
-              }
-            />
-          ),
         }}
         name={ScreenConstant.Tabs.Home}
         component={HomeScreen}
