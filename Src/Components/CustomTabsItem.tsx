@@ -16,7 +16,7 @@ const CustomTabItem = ({label, focused, icon}: TabItemParams) => {
       <Text
         numberOfLines={1}
         style={{
-          color: focused ? COLORS.primary : COLORS.grey,
+          color: focused ? COLORS.ORANGE : COLORS.LIGHTINACTIVE,
           fontFamily: FONTS.REGULAR,
         }}>
         {label}

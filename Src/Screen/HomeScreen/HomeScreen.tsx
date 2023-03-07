@@ -22,26 +22,11 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: COLORS.white,
-  },
-  content: {
-    flex: 1,
-    backgroundColor: COLORS.white,
-    padding: moderateScale(10),
+    backgroundColor: COLORS.WHITE,
   },
   title: {
-    color: COLORS.primary,
+    color: COLORS.PRIMARY,
     fontFamily: FONTS.BOLD,
     fontSize: FONTS_SIZE.font16,
-  },
-  rowView: {
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    flexDirection: 'row',
-  },
-  onboarding: {
-    height: '5%',
-    width: '50%',
-    backgroundColor: COLORS.darkBlue,
   },
 });
