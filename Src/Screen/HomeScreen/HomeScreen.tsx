@@ -7,16 +7,8 @@ import {
 } from 'react-native';
 import React from 'react';
 import COLORS from '../../Constant/Colors';
-import HomeHeader from './Components/HomeHeader';
-import SizedBox from '../../Components/SizedBox';
 import {moderateScale} from 'react-native-size-matters';
 import FONTS_SIZE from '../../Constant/FontSize';
-import ActivityCarousel from '../../Components/ActivityCarousel';
-import ModeHolder from './Components/ModeHolder';
-import IconAssets from '../../Assets/IconAssets';
-import OnboardingScreen from '../OnboardingScreen/OnboardingScreen';
-import NavigationHelper, {navigationRef} from '../../Utils/NavigationHelper';
-import ScreenConstant from '../../Constant/ScreenConstant';
 import FONTS from '../../Constant/FontsConstant';
 
 export default function HomeScreen() {

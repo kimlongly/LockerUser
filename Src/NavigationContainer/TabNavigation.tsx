@@ -8,9 +8,6 @@ import HomeScreen from '../Screen/HomeScreen/HomeScreen';
 import {Platform} from 'react-native';
 import CustomTabItem from '../Components/CustomTabsItem';
 import IconAssets from '../Assets/IconAssets';
-import DevicesScreen from '../Screen/DevicesScreen/DevicesScreen';
-import ActivityScreen from '../Screen/ActivityScreen/ActivityScreen';
-import AccountScreen from '../Screen/AccountScreen/AccountScreen';
 
 const Tabs = createBottomTabNavigator();
 
@@ -77,87 +74,6 @@ export default function TabNavigation() {
         }}
         name={ScreenConstant.Tabs.Home}
         component={HomeScreen}
-      />
-      <Tabs.Screen
-        options={{
-          headerShown: false,
-          title: 'Devices',
-          tabBarIcon: ({focused}) => (
-            <CustomTabItem
-              focused={focused}
-              label="Devices"
-              icon={
-                focused ? (
-                  <IconAssets.CameraActive
-                    width={moderateScale(20)}
-                    height={moderateScale(20)}
-                  />
-                ) : (
-                  <IconAssets.Camera
-                    width={moderateScale(20)}
-                    height={moderateScale(20)}
-                  />
-                )
-              }
-            />
-          ),
-        }}
-        component={DevicesScreen}
-        name={ScreenConstant.Tabs.Devices}
-      />
-      <Tabs.Screen
-        options={{
-          headerTitle: 'Activity',
-          title: 'Activity',
-          tabBarIcon: ({focused}) => (
-            <CustomTabItem
-              focused={focused}
-              label="Activity"
-              icon={
-                focused ? (
-                  <IconAssets.BellActive
-                    width={moderateScale(20)}
-                    height={moderateScale(20)}
-                  />
-                ) : (
-                  <IconAssets.Bell
-                    width={moderateScale(20)}
-                    height={moderateScale(20)}
-                  />
-                )
-              }
-            />
-          ),
-        }}
-        component={ActivityScreen}
-        name={ScreenConstant.Tabs.Activity}
-      />
-      <Tabs.Screen
-        options={{
-          headerShown: false,
-          title: '',
-          tabBarIcon: ({focused}) => (
-            <CustomTabItem
-              focused={focused}
-              label="Account"
-              icon={
-                focused ? (
-                  <IconAssets.Profile
-                    width={moderateScale(20)}
-                    height={moderateScale(20)}
-                  />
-                ) : (
-                  <IconAssets.Profile
-                    width={moderateScale(20)}
-                    height={moderateScale(20)}
-                  />
-                )
-              }
-            />
-          ),
-        }}
-        component={AccountScreen}
-        name={ScreenConstant.Tabs.Account}
       />
     </Tabs.Navigator>
   );

@@ -7,9 +7,7 @@ import FONTS from '../Constant/FontsConstant';
 import ScreenConstant from '../Constant/ScreenConstant';
 import {moderateScale} from 'react-native-size-matters';
 import TabNavigation from './TabNavigation';
-import DeviceDetailScreen from '../Screen/DeviceDetailScreen/DeviceDetailScreen';
-import NavBack from '../Components/NavBack';
-import CheckDeviceScreen from '../Screen/CheckDeviceScreen.tsx/CheckDeviceScreen';
+
 const Stack = createStackNavigator();
 
 export default function RootNavigation() {
@@ -34,32 +32,6 @@ export default function RootNavigation() {
           }}
           name={ScreenConstant.Tabs.name}
           component={TabNavigation}
-        />
-        <Stack.Screen
-          options={{
-            headerTitle: 'Add Device',
-            headerLeft: NavBack,
-            headerStyle: {
-              borderBottomLeftRadius: moderateScale(20),
-              borderBottomRightRadius: moderateScale(20),
-              backgroundColor: COLORS.primary,
-            },
-          }}
-          name={ScreenConstant.DeviceDetailScreen}
-          component={DeviceDetailScreen}
-        />
-        <Stack.Screen
-          options={{
-            headerTitle: 'Detail',
-            headerLeft: NavBack,
-            headerStyle: {
-              borderBottomLeftRadius: moderateScale(20),
-              borderBottomRightRadius: moderateScale(20),
-              backgroundColor: COLORS.primary,
-            },
-          }}
-          name={ScreenConstant.CheckDeviceScreen}
-          component={CheckDeviceScreen}
         />
       </Stack.Navigator>
     </NavigationContainer>
