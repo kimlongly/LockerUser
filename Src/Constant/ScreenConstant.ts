@@ -1,16 +1,11 @@
 const ScreenConstant = {
   SplashScreen: 'SplashScreen',
-  OnboardingScreen: 'OnboardingScreen',
-  SignInScreen: 'SignInScreen',
-  SignUpScreen: 'SignUpScreen',
-  HomeScreeen: 'HomeScreen',
-  DeviceDetailScreen: 'DeviceDetailScreen',
-  CheckDeviceScreen: 'CheckDeviceScreen',
   Tabs: {
     name: 'Tab',
     Home: 'Home',
-    Devices: 'Devices',
-    Activity: 'Activity',
+    Tracking: 'Tracking',
+    Booking: 'Booking',
+    Report: 'Report',
     Account: 'Account',
   },
 };
