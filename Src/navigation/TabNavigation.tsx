@@ -1,16 +1,16 @@
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import React from 'react';
-import COLORS from '../Constant/Colors';
-import ScreenConstant from '../Constant/ScreenConstant';
 import {moderateScale} from 'react-native-size-matters';
-import HomeScreen from '../Screen/HomeScreen/HomeScreen';
+import HomeScreen from '../screen/HomeScreen/HomeScreen';
 import {Platform} from 'react-native';
-import CustomTabItem from '../Components/CustomTabsItem';
-import {ICON_ASSETS} from '../Assets/IconAssets';
-import TrackingParcelScreen from '../Screen/TrackingParcelScreen/TrackingParcelScreen';
-import ShippingServiceScreen from '../Screen/ShippingServiceScreen/ShippingServiceScreen';
-import ReportScreen from '../Screen/ReportScreen/ReportScreen';
-import AccountScreen from '../Screen/AccountScreen/AccountScreen';
+import TrackingParcelScreen from '../screen/TrackingParcelScreen/TrackingParcelScreen';
+import ShippingServiceScreen from '../screen/ShippingServiceScreen/ShippingServiceScreen';
+import ReportScreen from '../screen/ReportScreen/ReportScreen';
+import AccountScreen from '../screen/AccountScreen/AccountScreen';
+import COLORS from '../constants/Colors';
+import ScreenConstant from '../constants/ScreenConstant';
+import CustomTabItem from '../components/CustomTabsItem';
+import {ICON_ASSETS} from '../assets/IconAssets';
 const Tabs = createBottomTabNavigator();
 
 export default function TabNavigation() {
@@ -94,7 +94,7 @@ export default function TabNavigation() {
         name={ScreenConstant.Tabs.Report}
         component={ReportScreen}
         options={{
-          header: () => {},
+          headerShown: false,
           tabBarIcon: ({focused}) => (
             <CustomTabItem
               label="Report"
@@ -114,7 +114,7 @@ export default function TabNavigation() {
         name={ScreenConstant.Tabs.Account}
         component={AccountScreen}
         options={{
-          header: () => {},
+          headerShown: false,
           tabBarIcon: ({focused}) => (
             <CustomTabItem
               label="Account"

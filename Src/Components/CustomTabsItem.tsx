@@ -1,7 +1,7 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
-import COLORS from '../Constant/Colors';
-import FONTS from '../Constant/FontsConstant';
+import COLORS from '../constants/Colors';
+import FONTS from '../constants/FontsConstant';
 
 interface TabItemParams {
   label: string;

@@ -2,8 +2,8 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import React from 'react';
 import {navigationRef} from '../Utils/NavigationHelper';
-import ScreenConstant from '../Constant/ScreenConstant';
 import TabNavigation from './TabNavigation';
+import ScreenConstant from '../constants/ScreenConstant';
 const Stack = createStackNavigator();
 
 export default function RootNavigation() {
