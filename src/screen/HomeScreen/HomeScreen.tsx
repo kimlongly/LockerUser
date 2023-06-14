@@ -1,16 +1,8 @@
-import {
-  ScrollView,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-} from 'react-native';
 import React from 'react';
-import COLORS from '../../Constant/Colors';
-import {moderateScale} from 'react-native-size-matters';
-import FONTS_SIZE from '../../Constant/FontSize';
-import FONTS from '../../Constant/FontsConstant';
-
+import {StyleSheet, Text, View} from 'react-native';
+import COLORS from '../../constants/Colors';
+import FONTS from '../../constants/FontsConstant';
+import FONTS_SIZE from '../../constants/FontSize';
 export default function HomeScreen() {
   return (
     <View style={styles.container}>

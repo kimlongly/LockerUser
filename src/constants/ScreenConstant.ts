@@ -1,5 +1,11 @@
 const ScreenConstant = {
   SplashScreen: 'SplashScreen',
+  Auth: {
+    Login: 'Login',
+    Register: 'Regiser',
+    Verify: 'Verify',
+    ResetPassword: 'ResetPassword',
+  },
   Tabs: {
     name: 'Tab',
     Home: 'Home',
