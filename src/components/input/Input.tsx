@@ -25,6 +25,7 @@ interface inputProps {
   editable?: boolean;
   missingField?: boolean;
   isPassword?: boolean;
+  limit?: number;
 }
 
 export default function Input({
@@ -39,6 +40,7 @@ export default function Input({
   keyboard = 'default',
   editable = true,
   isPassword = false,
+  limit,
 }: inputProps) {
   return (
     <View
@@ -56,6 +58,7 @@ export default function Input({
           </Text>
         )}
         <TextInput
+          maxLength={limit}
           editable={editable}
           keyboardType={keyboard}
           secureTextEntry={isPassword}
@@ -79,6 +82,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: moderateScale(10),
     flexDirection: 'row',
     alignItems: 'center',
+    alignSelf: 'center',
     borderColor: COLORS.Alert,
   },
   labelStyles: {

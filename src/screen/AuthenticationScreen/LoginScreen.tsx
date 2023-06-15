@@ -18,16 +18,19 @@ import FONTS_SIZE from '../../constants/FontSize';
 import COLORS from '../../constants/Colors';
 import NavigationHelper from '../../utils/NavigationHelper';
 import ScreenConstant from '../../constants/ScreenConstant';
+import FONTS from '../../constants/FontsConstant';
 export default function LoginScreen() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [code, setCode] = useState('');
   const [missingField, setMissingField] = useState(false);
   const [isLogin, setIsLogin] = useState(true);
+  const [codeSent, setCodeSent] = useState(false);
   const logoAnimation = useRef(new Animated.Value(0)).current;
   const formAnimation = useRef(new Animated.Value(0)).current;
   const heightAnimation = formAnimation.interpolate({
     inputRange: [0, 1],
-    outputRange: ['0%', '40%'],
+    outputRange: ['0%', '45%'],
   });
   const animate = () => {
     Animated.sequence([
@@ -45,19 +48,50 @@ export default function LoginScreen() {
       }),
     ]).start();
   };
+  const close = () => {
+    Animated.timing(formAnimation, {
+      toValue: 0,
+      duration: 500,
+      useNativeDriver: false,
+      easing: Easing.linear,
+    }).start(() => {
+      setIsLogin(prev => !prev);
+      setEmail('');
+      setPassword('');
+      setCode('');
+      setMissingField(false);
+      open();
+    });
+  };
+  const open = () => {
+    Animated.timing(formAnimation, {
+      toValue: 1,
+      duration: 500,
+      useNativeDriver: false,
+      easing: Easing.linear,
+    }).start();
+  };
 
   const checkField = () => {
     if (password.length === 0 || email.length === 0) {
+      return false;
+    }
+    if (!isLogin && code.length < 4) {
       return false;
     }
     return true;
   };
   const login = () => {
     if (checkField()) {
-      NavigationHelper.navigate({name: ScreenConstant.Tabs.name});
+      isLogin
+        ? NavigationHelper.navigate({name: ScreenConstant.Tabs.name})
+        : NavigationHelper.navigate({name: ScreenConstant.Auth.Register});
     } else {
       setMissingField(true);
     }
+  };
+  const forgotPasseword = () => {
+    NavigationHelper.navigate({name: ScreenConstant.Auth.ResetPassword});
   };
 
   useEffect(() => {
@@ -98,16 +132,47 @@ export default function LoginScreen() {
             value={password}
             onChange={inp => setPassword(inp)}
           />
+          <SizedBox height={moderateScale(15)} />
+          {!isLogin && (
+            <Input
+              keyboard={'number-pad'}
+              limit={4}
+              missingField={missingField && code.length < 4}
+              isRequired={true}
+              label={'Code'}
+              value={code}
+              onChange={inp => setCode(inp)}
+              icon={
+                <TouchableOpacity
+                  disabled={email.length === 0}
+                  onPress={() => {
+                    setCodeSent(prev => !prev);
+                  }}>
+                  <Text style={styles.getCode}>
+                    {codeSent ? 'Resend' : 'Get Code'}
+                  </Text>
+                </TouchableOpacity>
+              }
+            />
+          )}
           <SizedBox height={moderateScale(30)} />
           <Button label={isLogin ? 'Sign In' : 'Sign Up'} onPress={login} />
           <SizedBox height={moderateScale(10)} />
           <View style={GlobalStyle.innerRow}>
-            <Text style={styles.bottomText}>Don't have an account ?</Text>
+            <TouchableOpacity onPress={forgotPasseword}>
+              <Text style={styles.pressableText}>Forgot Password</Text>
+            </TouchableOpacity>
             <SizedBox width={moderateScale(5)} />
-            <TouchableOpacity
-              onPress={() => {
-                setIsLogin(prev => !prev);
-              }}>
+            <View
+              style={{
+                height: moderateScale(5),
+                width: moderateScale(5),
+                borderRadius: moderateScale(5),
+                backgroundColor: COLORS.WHITE,
+              }}
+            />
+            <SizedBox width={moderateScale(5)} />
+            <TouchableOpacity onPress={close}>
               <Text style={styles.pressableText}>
                 {isLogin ? 'Sign Up' : 'Sign In'}
               </Text>
@@ -139,5 +204,10 @@ const styles = StyleSheet.create({
     fontSize: FONTS_SIZE.font12,
     color: COLORS.WHITE,
     textAlign: 'center',
+  },
+  getCode: {
+    color: COLORS.WHITE,
+    fontFamily: FONTS.MEDIUM,
+    fontSize: FONTS_SIZE.font11,
   },
 });

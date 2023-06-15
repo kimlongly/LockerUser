@@ -45,6 +45,7 @@ const styles = StyleSheet.create({
     borderRadius: moderateScale(2),
     justifyContent: 'center',
     alignItems: 'center',
+    alignSelf: 'center',
   },
   labelStyle: {
     textTransform: 'capitalize',

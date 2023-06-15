@@ -6,6 +6,8 @@ import TabNavigation from './TabNavigation';
 import ScreenConstant from '../constants/ScreenConstant';
 import SplashScreen from '../screen/SplashScreen/SplashScreen';
 import LoginScreen from '../screen/AuthenticationScreen/LoginScreen';
+import RegisterScreen from '../screen/AuthenticationScreen/RegisterScreen';
+import ResetPasswordScreen from '../screen/AuthenticationScreen/ResetPasswordScreen';
 const Stack = createStackNavigator();
 
 export default function RootNavigation() {
@@ -34,6 +36,20 @@ export default function RootNavigation() {
           }}
           name={ScreenConstant.Auth.Login}
           component={LoginScreen}
+        />
+        <Stack.Screen
+          options={{
+            headerShown: false,
+          }}
+          name={ScreenConstant.Auth.Register}
+          component={RegisterScreen}
+        />
+        <Stack.Screen
+          options={{
+            headerShown: false,
+          }}
+          name={ScreenConstant.Auth.ResetPassword}
+          component={ResetPasswordScreen}
         />
       </Stack.Navigator>
     </NavigationContainer>

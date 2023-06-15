@@ -14,7 +14,7 @@ import ScreenConstant from '../../constants/ScreenConstant';
 export default function SplashScreen() {
   const navigation = () => {
     setTimeout(() => {
-      NavigationHelper.navigate({name: ScreenConstant.Auth.Login});
+      NavigationHelper.reset({name: ScreenConstant.Auth.Login});
     }, 2000);
   };
   useEffect(() => {

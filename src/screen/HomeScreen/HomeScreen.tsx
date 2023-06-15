@@ -1,12 +1,15 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, View} from 'react-native';
+import {moderateScale} from 'react-native-size-matters';
+import SizedBox from '../../components/SizedBox';
 import COLORS from '../../constants/Colors';
-import FONTS from '../../constants/FontsConstant';
 import FONTS_SIZE from '../../constants/FontSize';
+import FONTS from '../../constants/FontsConstant';
+import {GlobalStyle} from '../../utils/GlobalStyle';
 export default function HomeScreen() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Hello HomeScreen</Text>
+    <View style={GlobalStyle.container}>
+      <SizedBox height={moderateScale(20)} />
     </View>
   );
 }

@@ -1,10 +1,10 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 
-export default function ShippingServiceScreen() {
+export default function BookingHistoryScreen() {
   return (
     <View>
-      <Text>ShippingServiceScreen</Text>
+      <Text>BookingHistoryScreen</Text>
     </View>
   );
 }
