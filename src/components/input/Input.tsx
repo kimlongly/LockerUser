@@ -1,4 +1,5 @@
 import {
+  Platform,
   StyleSheet,
   Text,
   TextInput,
@@ -90,9 +91,11 @@ const styles = StyleSheet.create({
     fontSize: FONTS_SIZE.font10,
     fontFamily: FONTS.LIGHT,
     color: COLORS.INACTIVE,
-    marginBottom: -10,
+    position: 'absolute',
+    top: Platform.OS === 'android' ? 0 : 5,
   },
   textField: {
+    height: '100%',
     paddingLeft: 0,
     color: COLORS.WHITE,
     fontSize: FONTS_SIZE.font14,

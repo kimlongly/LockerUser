@@ -1,27 +1,49 @@
 import React from 'react';
-import {StyleSheet, View} from 'react-native';
+import {StyleSheet, View, Text} from 'react-native';
 import {moderateScale} from 'react-native-size-matters';
 import SizedBox from '../../components/SizedBox';
 import COLORS from '../../constants/Colors';
 import FONTS_SIZE from '../../constants/FontSize';
 import FONTS from '../../constants/FontsConstant';
 import {GlobalStyle} from '../../utils/GlobalStyle';
+import {DEVICE} from '../../utils/Device';
+import CustomCarousel from '../../components/carousel/CustomCarousel';
 export default function HomeScreen() {
   return (
     <View style={GlobalStyle.container}>
-      <SizedBox height={moderateScale(20)} />
+      <Text style={styles.introduction}>Start Booking</Text>
+      <SizedBox height={moderateScale(10)} />
+      <CustomCarousel />
+      <SizedBox height={moderateScale(10)} />
+      <View
+        style={[GlobalStyle.rowView, {paddingHorizontal: moderateScale(10)}]}>
+        <View style={styles.services}></View>
+        <View style={styles.services}></View>
+      </View>
+      <SizedBox height={moderateScale(10)} />
+      <View style={styles.tracking}></View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: COLORS.WHITE,
-  },
-  title: {
-    color: COLORS.PRIMARY,
+  introduction: {
+    color: COLORS.WHITE,
     fontFamily: FONTS.BOLD,
-    fontSize: FONTS_SIZE.font16,
+    fontSize: FONTS_SIZE.font24,
+    padding: moderateScale(10),
+  },
+  tracking: {
+    height: moderateScale(120),
+    backgroundColor: COLORS.DARKCOMMONTEXT,
+    alignSelf: 'center',
+    borderRadius: moderateScale(10),
+    width: DEVICE.SCREEN_WIDTH - moderateScale(20),
+  },
+  services: {
+    width: (DEVICE.SCREEN_WIDTH - moderateScale(30)) / 2,
+    height: (DEVICE.SCREEN_WIDTH - moderateScale(30)) / 2,
+    backgroundColor: COLORS.DARKCOMMONTEXT,
+    borderRadius: moderateScale(10),
   },
 });

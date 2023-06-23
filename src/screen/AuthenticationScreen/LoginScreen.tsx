@@ -1,6 +1,7 @@
 import {
   Animated,
   Easing,
+  KeyboardAvoidingView,
   StyleSheet,
   Text,
   TouchableOpacity,
@@ -19,6 +20,7 @@ import COLORS from '../../constants/Colors';
 import NavigationHelper from '../../utils/NavigationHelper';
 import ScreenConstant from '../../constants/ScreenConstant';
 import FONTS from '../../constants/FontsConstant';
+import Checker from '../../components/background/Checker';
 export default function LoginScreen() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -30,7 +32,7 @@ export default function LoginScreen() {
   const formAnimation = useRef(new Animated.Value(0)).current;
   const heightAnimation = formAnimation.interpolate({
     inputRange: [0, 1],
-    outputRange: ['0%', '45%'],
+    outputRange: [0, isLogin ? moderateScale(222) : moderateScale(287)],
   });
   const animate = () => {
     Animated.sequence([
@@ -100,88 +102,88 @@ export default function LoginScreen() {
 
   return (
     <View style={[GlobalStyle.container, styles.container]}>
-      <View style={styles.content}>
-        <SizedBox height={moderateScale(0)} />
-        <SizedBox height={moderateScale(50)} />
-        <Animated.View style={{opacity: logoAnimation}}>
-          <ICON_ASSETS.Logo
-            width={DEVICE.SCREEN_WIDTH / 1.3}
-            height={DEVICE.SCREEN_WIDTH / 5}
-          />
-        </Animated.View>
-        <Animated.View
-          key={'InputForm'}
-          style={{
-            alignItems: 'center',
-            height: heightAnimation,
-            overflow: 'hidden',
-          }}>
-          <Input
-            missingField={missingField && email.length === 0}
-            isRequired={true}
-            label={'Email'}
-            value={email}
-            onChange={inp => setEmail(inp)}
-          />
-          <SizedBox height={moderateScale(15)} />
-          <Input
-            isPassword={true}
-            missingField={missingField && password.length === 0}
-            isRequired={true}
-            label={'Password'}
-            value={password}
-            onChange={inp => setPassword(inp)}
-          />
-          <SizedBox height={moderateScale(15)} />
-          {!isLogin && (
+      <Checker />
+      <KeyboardAvoidingView behavior="padding">
+        <View style={styles.content}>
+          <Animated.View style={{opacity: logoAnimation}}>
+            <ICON_ASSETS.Logo
+              width={DEVICE.SCREEN_WIDTH / 1.3}
+              height={DEVICE.SCREEN_WIDTH / 5}
+            />
+          </Animated.View>
+          <SizedBox height={moderateScale(70)} />
+          <Animated.View
+            key={'InputForm'}
+            style={{
+              alignItems: 'center',
+              height: heightAnimation,
+              overflow: 'hidden',
+            }}>
             <Input
-              keyboard={'number-pad'}
-              limit={4}
-              missingField={missingField && code.length < 4}
+              missingField={missingField && email.length === 0}
               isRequired={true}
-              label={'Code'}
-              value={code}
-              onChange={inp => setCode(inp)}
-              icon={
-                <TouchableOpacity
-                  disabled={email.length === 0}
-                  onPress={() => {
-                    setCodeSent(prev => !prev);
-                  }}>
-                  <Text style={styles.getCode}>
-                    {codeSent ? 'Resend' : 'Get Code'}
-                  </Text>
-                </TouchableOpacity>
-              }
+              label={'Email'}
+              value={email}
+              onChange={inp => setEmail(inp)}
             />
-          )}
-          <SizedBox height={moderateScale(30)} />
-          <Button label={isLogin ? 'Sign In' : 'Sign Up'} onPress={login} />
-          <SizedBox height={moderateScale(10)} />
-          <View style={GlobalStyle.innerRow}>
-            <TouchableOpacity onPress={forgotPasseword}>
-              <Text style={styles.pressableText}>Forgot Password</Text>
-            </TouchableOpacity>
-            <SizedBox width={moderateScale(5)} />
-            <View
-              style={{
-                height: moderateScale(5),
-                width: moderateScale(5),
-                borderRadius: moderateScale(5),
-                backgroundColor: COLORS.WHITE,
-              }}
+            <SizedBox height={moderateScale(15)} />
+            <Input
+              isPassword={true}
+              missingField={missingField && password.length === 0}
+              isRequired={true}
+              label={'Password'}
+              value={password}
+              onChange={inp => setPassword(inp)}
             />
-            <SizedBox width={moderateScale(5)} />
-            <TouchableOpacity onPress={close}>
-              <Text style={styles.pressableText}>
-                {isLogin ? 'Sign Up' : 'Sign In'}
-              </Text>
-            </TouchableOpacity>
-          </View>
-        </Animated.View>
-        <SizedBox height={moderateScale(0)} />
-        <SizedBox height={moderateScale(0)} />
-      </View>
+            {!isLogin && <SizedBox height={moderateScale(15)} />}
+            {!isLogin && (
+              <Input
+                keyboard={'number-pad'}
+                limit={4}
+                missingField={missingField && code.length < 4}
+                isRequired={true}
+                label={'Code'}
+                value={code}
+                onChange={inp => setCode(inp)}
+                icon={
+                  <TouchableOpacity
+                    disabled={email.length === 0}
+                    onPress={() => {
+                      setCodeSent(prev => !prev);
+                    }}>
+                    <Text style={styles.getCode}>
+                      {codeSent ? 'Resend' : 'Get Code'}
+                    </Text>
+                  </TouchableOpacity>
+                }
+              />
+            )}
+            <SizedBox height={moderateScale(30)} />
+            <Button label={isLogin ? 'Sign In' : 'Sign Up'} onPress={login} />
+            <SizedBox height={moderateScale(10)} />
+            <View style={GlobalStyle.innerRow}>
+              <TouchableOpacity onPress={forgotPasseword}>
+                <Text style={styles.pressableText}>Forgot Password</Text>
+              </TouchableOpacity>
+              <SizedBox width={moderateScale(5)} />
+              <View
+                style={{
+                  height: moderateScale(5),
+                  width: moderateScale(5),
+                  borderRadius: moderateScale(5),
+                  backgroundColor: COLORS.WHITE,
+                }}
+              />
+              <SizedBox width={moderateScale(5)} />
+              <TouchableOpacity onPress={close}>
+                <Text style={styles.pressableText}>
+                  {isLogin ? 'Sign Up' : 'Sign In'}
+                </Text>
+              </TouchableOpacity>
+            </View>
+          </Animated.View>
+        </View>
+      </KeyboardAvoidingView>
     </View>
   );
 }
@@ -192,7 +194,7 @@ const styles = StyleSheet.create({
   },
   content: {
     alignItems: 'center',
-    justifyContent: 'space-between',
+    justifyContent: 'center',
     height: DEVICE.SCREEN_HEIGHT / 1.2,
   },
   bottomText: {

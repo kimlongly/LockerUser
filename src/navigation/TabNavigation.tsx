@@ -11,6 +11,7 @@ import HomeScreen from '../screen/HomeScreen/HomeScreen';
 import BookingHistoryScreen from '../screen/BookingHistoryScreen/BookingHistoryScreen';
 import HomeTabBarButton from '../components/HomeTabBarButton';
 import HomeHeader from '../components/header/HomeHeader';
+import {DEVICE} from '../utils/Device';
 const Tabs = createBottomTabNavigator();
 export default function TabNavigation() {
   return (
@@ -24,9 +25,11 @@ export default function TabNavigation() {
           borderRadius: moderateScale(10),
           position: 'absolute',
           backgroundColor: COLORS.BLACK,
+          borderWidth: 1,
           elevation: 6,
           height: Platform.OS === 'ios' ? 75 : 60,
           paddingBottom: 0,
+          width: DEVICE.SCREEN_WIDTH,
         },
       }}>
       <Tabs.Screen

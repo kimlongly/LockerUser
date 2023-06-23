@@ -1,4 +1,11 @@
-import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {
+  Platform,
+  StatusBar,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import React from 'react';
 import {GlobalStyle} from '../../utils/GlobalStyle';
 import {moderateScale} from 'react-native-size-matters';
@@ -8,11 +15,12 @@ import SizedBox from '../SizedBox';
 import FONTS from '../../constants/FontsConstant';
 import FONTS_SIZE from '../../constants/FontSize';
 import {ICON_ASSETS} from '../../assets/IconAssets';
-
+import {DEVICE} from '../../utils/Device';
 export default function HomeHeader() {
   return (
     <View style={styles.headerContainer}>
       <View style={GlobalStyle.innerRow}>
+        <StatusBar translucent backgroundColor={'transparent'} />
         <TouchableOpacity style={styles.profileContainer}>
           <FastImage
             source={{
@@ -46,6 +54,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     padding: moderateScale(10),
     backgroundColor: COLORS.BLACK,
+    paddingTop:
+      Platform.OS === 'android'
+        ? StatusBar?.currentHeight + moderateScale(10)
+        : DEVICE.SCREEN_HEIGHT - DEVICE.SCREEN_HEIGHT * 0.95,
   },
   profileContainer: {
     height: moderateScale(50),
