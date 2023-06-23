@@ -12,13 +12,13 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		25DE352057EF4C7EBD744871 /* RobotoSlab-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 49F26AD762AE43FC9CC214E0 /* RobotoSlab-Regular.ttf */; };
+		373CBF7EA24A4B0FA3D16F25 /* RobotoSlab-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7267733EE634ACF9E9FCECD /* RobotoSlab-Medium.ttf */; };
+		67E2C705E8E54B90934DD930 /* RobotoSlab-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 67932B0ECE254276B7CBA4A6 /* RobotoSlab-Bold.ttf */; };
 		7699B88040F8A987B510C191 /* libPods-SmartLocker-SmartLockerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-SmartLocker-SmartLockerTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		67E2C705E8E54B90934DD930 /* RobotoSlab-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 67932B0ECE254276B7CBA4A6 /* RobotoSlab-Bold.ttf */; };
-		DFC7C9E78FDD42008569B4C3 /* RobotoSlab-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1CDC40CE0AD741108E79BBFA /* RobotoSlab-Light.ttf */; };
-		373CBF7EA24A4B0FA3D16F25 /* RobotoSlab-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7267733EE634ACF9E9FCECD /* RobotoSlab-Medium.ttf */; };
-		25DE352057EF4C7EBD744871 /* RobotoSlab-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 49F26AD762AE43FC9CC214E0 /* RobotoSlab-Regular.ttf */; };
 		B42E88EF7857407E840A7340 /* RobotoSlab-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 896F58A1941948508ECB890B /* RobotoSlab-SemiBold.ttf */; };
+		DFC7C9E78FDD42008569B4C3 /* RobotoSlab-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1CDC40CE0AD741108E79BBFA /* RobotoSlab-Light.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,18 +42,18 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = SmartLocker/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = SmartLocker/main.m; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-SmartLocker-SmartLockerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SmartLocker-SmartLockerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1CDC40CE0AD741108E79BBFA /* RobotoSlab-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "RobotoSlab-Light.ttf"; path = "../src/assets/fonts/RobotoSlab-Light.ttf"; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-SmartLocker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartLocker.debug.xcconfig"; path = "Target Support Files/Pods-SmartLocker/Pods-SmartLocker.debug.xcconfig"; sourceTree = "<group>"; };
+		49F26AD762AE43FC9CC214E0 /* RobotoSlab-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "RobotoSlab-Regular.ttf"; path = "../src/assets/fonts/RobotoSlab-Regular.ttf"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-SmartLocker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartLocker.release.xcconfig"; path = "Target Support Files/Pods-SmartLocker/Pods-SmartLocker.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-SmartLocker-SmartLockerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartLocker-SmartLockerTests.debug.xcconfig"; path = "Target Support Files/Pods-SmartLocker-SmartLockerTests/Pods-SmartLocker-SmartLockerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-SmartLocker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SmartLocker.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		67932B0ECE254276B7CBA4A6 /* RobotoSlab-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "RobotoSlab-Bold.ttf"; path = "../src/assets/fonts/RobotoSlab-Bold.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = SmartLocker/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		896F58A1941948508ECB890B /* RobotoSlab-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "RobotoSlab-SemiBold.ttf"; path = "../src/assets/fonts/RobotoSlab-SemiBold.ttf"; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-SmartLocker-SmartLockerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartLocker-SmartLockerTests.release.xcconfig"; path = "Target Support Files/Pods-SmartLocker-SmartLockerTests/Pods-SmartLocker-SmartLockerTests.release.xcconfig"; sourceTree = "<group>"; };
+		D7267733EE634ACF9E9FCECD /* RobotoSlab-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "RobotoSlab-Medium.ttf"; path = "../src/assets/fonts/RobotoSlab-Medium.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		67932B0ECE254276B7CBA4A6 /* RobotoSlab-Bold.ttf */ = {isa = PBXFileReference; name = "RobotoSlab-Bold.ttf"; path = "../src/assets/fonts/RobotoSlab-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		1CDC40CE0AD741108E79BBFA /* RobotoSlab-Light.ttf */ = {isa = PBXFileReference; name = "RobotoSlab-Light.ttf"; path = "../src/assets/fonts/RobotoSlab-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		D7267733EE634ACF9E9FCECD /* RobotoSlab-Medium.ttf */ = {isa = PBXFileReference; name = "RobotoSlab-Medium.ttf"; path = "../src/assets/fonts/RobotoSlab-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		49F26AD762AE43FC9CC214E0 /* RobotoSlab-Regular.ttf */ = {isa = PBXFileReference; name = "RobotoSlab-Regular.ttf"; path = "../src/assets/fonts/RobotoSlab-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		896F58A1941948508ECB890B /* RobotoSlab-SemiBold.ttf */ = {isa = PBXFileReference; name = "RobotoSlab-SemiBold.ttf"; path = "../src/assets/fonts/RobotoSlab-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,7 +160,7 @@
 			sourceTree = "<group>";
 		};
 		F90CDCED6A2E498787940B42 /* Resources */ = {
-			isa = "PBXGroup";
+			isa = PBXGroup;
 			children = (
 				67932B0ECE254276B7CBA4A6 /* RobotoSlab-Bold.ttf */,
 				1CDC40CE0AD741108E79BBFA /* RobotoSlab-Light.ttf */,
@@ -170,7 +170,6 @@
 			);
 			name = Resources;
 			sourceTree = "<group>";
-			path = "";
 		};
 /* End PBXGroup section */
 
@@ -515,6 +514,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BLJX6NG3ZR;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = SmartLocker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -541,6 +541,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BLJX6NG3ZR;
 				INFOPLIST_FILE = SmartLocker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
