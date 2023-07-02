@@ -1,5 +1,5 @@
 import {FlatList, StyleSheet, Text, View, ViewStyle} from 'react-native';
-import React, {useEffect, useRef} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import {moderateScale} from 'react-native-size-matters';
 import COLORS from '../../constants/Colors';
 import {DEVICE} from '../../utils/Device';
@@ -9,6 +9,10 @@ interface CarouselProps {
   containerStyle?: ViewStyle;
   width?: string | number;
   height?: string | number;
+  durationInterval?: number;
+  items?: any;
+  CarouselItem?: JSX.Element;
+  autoPlayer?: boolean;
 }
 let interval;
 var index = 0;
@@ -16,38 +20,101 @@ export default function CustomCarousel({
   containerStyle = {},
   width = DEVICE.SCREEN_WIDTH - moderateScale(20),
   height = moderateScale(120),
+  autoPlayer = true,
+  CarouselItem,
+  items,
+  durationInterval = 2000,
 }: CarouselProps) {
-  var data = [1, 2, 3, 4, 5, 6];
+  const [show, setShow] = useState(true);
   const scrollRef = useRef<any>(null);
+  const data = [
+    {
+      id: '1',
+      image:
+        'https://img.freepik.com/premium-vector/black-friday-design-promotional-delivery-goods_145865-174.jpg?w=1800',
+    },
+    {
+      id: '2',
+      image:
+        'https://img.freepik.com/premium-photo/data-center-with-robotic-systems-pick-pack-ship-operations_124507-147653.jpg?w=1380',
+    },
+    {
+      id: '3',
+      image:
+        'https://img.freepik.com/premium-psd/black-friday-sale-laptops-gadgets-banner-template-3d-render_444361-44.jpg?w=1480',
+    },
+    {
+      id: '4',
+      image:
+        'https://img.freepik.com/premium-psd/shoes-sale-horizonral-banner-template_554907-427.jpg?w=1380',
+    },
+    {
+      id: '5',
+      image:
+        'https://img.freepik.com/premium-vector/black-friday-online-shopping-with-illustrations-3d-smartphones-motorbikes_269039-81.jpg?w=1480',
+    },
+    {
+      id: '6',
+      image:
+        'https://img.freepik.com/premium-vector/black-friday-online-shopping-with-nuances-night_269039-111.jpg?w=1480',
+    },
+    {
+      id: '1',
+      image:
+        'https://img.freepik.com/premium-vector/black-friday-design-promotional-delivery-goods_145865-174.jpg?w=1800',
+    },
+  ];
+  // ================== InitialCall =======================//
+
   useEffect(() => {
     stopAuto();
-    playAuto();
+    if (autoPlayer) {
+      playAuto(durationInterval);
+    }
     return () => {
       stopAuto();
     };
   }, []);
-  const playAuto = () => {
+
+  // ================== Interval logic ==================== //
+
+  const playAuto = (inter = 2000) => {
     interval = setInterval(() => {
       scroll();
-    }, 1000);
+    }, inter);
   };
   const stopAuto = () => {
     clearInterval(interval);
   };
+
+  // ===================Check Scroll ===================//
+  const checkScroll = ({layoutMeasurement, contentOffset}) => {
+    index = parseInt((contentOffset.x / layoutMeasurement.width).toString());
+  };
+
   const scroll = () => {
     if (index < data.length - 1) {
-      index = index + 1;
-      scrollRef.current.scrollToIndex({index: index, animated: true});
+      scrollRef.current.scrollToIndex({index: index + 1, animated: true});
+      if (index === data.length - 2) {
+        stopAuto();
+        playAuto(250);
+      }
     } else {
+      stopAuto();
+      playAuto(2000);
+      setShow(false);
       index = 0;
-      scrollRef.current.scrollToIndex({index: index, animated: true});
+      setShow(true);
     }
   };
+
   const renderItem = ({item}) => {
-    return (
+    return CarouselItem ? (
+      <CarouselItem />
+    ) : (
       <FastImage
         source={{
-          uri: 'https://assets-prd.ignimgs.com/2023/02/08/jw4-2025x3000-online-character-1sht-keanu-v187-1675886090936.jpg',
+          uri: item.image,
         }}
         style={{
           width: width,
@@ -55,14 +122,6 @@ export default function CustomCarousel({
         }}
         resizeMode="cover"
       />
-      //   <View
-      //     style={{
-      //       width: width,
-      //       height: height,
-      //       backgroundColor: COLORS.WHITE,
-      //     }}>
-      //     <Text style={{color: COLORS.BLACK}}>{item}</Text>
-      //   </View>
     );
   };
   return (
@@ -72,16 +131,23 @@ export default function CustomCarousel({
         {width: width, height: height},
         containerStyle,
       ]}>
-      <FlatList
-        ref={scrollRef}
-        data={data}
-        keyExtractor={item => item.toString()}
-        renderItem={renderItem}
-        horizontal={true}
-        pagingEnabled={true}
-        indicatorStyle="white"
-        style={{flex: 1}}
-      />
+      {show ? (
+        <FlatList
+          onScroll={({nativeEvent}) => {
+            checkScroll(nativeEvent);
+          }}
+          ref={scrollRef}
+          data={data}
+          keyExtractor={(_, index) => index.toString()}
+          renderItem={renderItem}
+          horizontal={true}
+          pagingEnabled={true}
+          indicatorStyle="white"
+          style={{flex: 1}}
+        />
+      ) : (
+        <View />
+      )}
     </View>
   );
 }

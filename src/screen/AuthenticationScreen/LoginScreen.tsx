@@ -2,6 +2,7 @@ import {
   Animated,
   Easing,
   KeyboardAvoidingView,
+  Platform,
   StyleSheet,
   Text,
   TouchableOpacity,
@@ -103,7 +104,8 @@ export default function LoginScreen() {
   return (
     <View style={[GlobalStyle.container, styles.container]}>
       <Checker />
-      <KeyboardAvoidingView behavior="padding">
+      <KeyboardAvoidingView
+        behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
         <View style={styles.content}>
           <Animated.View style={{opacity: logoAnimation}}>
             <ICON_ASSETS.Logo

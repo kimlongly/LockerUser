@@ -92,7 +92,7 @@ const styles = StyleSheet.create({
     fontFamily: FONTS.LIGHT,
     color: COLORS.INACTIVE,
     position: 'absolute',
-    top: Platform.OS === 'android' ? 0 : 5,
+    top: Platform.OS === 'android' ? 5 : 5,
   },
   textField: {
     height: '100%',
