@@ -8,6 +8,8 @@ import FONTS from '../../constants/FontsConstant';
 import {GlobalStyle} from '../../utils/GlobalStyle';
 import {DEVICE} from '../../utils/Device';
 import CustomCarousel from '../../components/carousel/CustomCarousel';
+import ServicesButton from './components/ServicesButton';
+import {IMAGE_ASSETS} from '../../assets/ImageAssets';
 export default function HomeScreen() {
   return (
     <View style={GlobalStyle.container}>
@@ -17,8 +19,8 @@ export default function HomeScreen() {
       <SizedBox height={moderateScale(10)} />
       <View
         style={[GlobalStyle.rowView, {paddingHorizontal: moderateScale(10)}]}>
-        <View style={styles.services}></View>
-        <View style={styles.services}></View>
+        <ServicesButton image={IMAGE_ASSETS.Locker} />
+        <ServicesButton image={IMAGE_ASSETS.Van} />
       </View>
       <SizedBox height={moderateScale(10)} />
       <View style={styles.tracking}></View>
