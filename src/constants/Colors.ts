@@ -11,6 +11,7 @@ const COLORS = {
   LIGHTINACTIVE: '#CDCDCD',
   Alert: '#E21B1B',
   SUCCESS: '#54B435',
-  BACKDROP: 'rgba(0,0,0,0.6)',
+  BACKDROP: 'rgba(0,0,0,0.65)',
+  WHITEBACKDROP: 'rgba(255,255,255,0.65)',
 };
 export default COLORS;

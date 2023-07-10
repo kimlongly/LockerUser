@@ -90,21 +90,33 @@ export default function CustomCarousel({
   // ===================Check Scroll ===================//
   const checkScroll = ({layoutMeasurement, contentOffset}) => {
     index = parseInt((contentOffset.x / layoutMeasurement.width).toString());
+    // if (!autoPlayer) {
+    //   if (index === data.length - 1) {
+    //     setShow(false);
+    //     index = 0;
+    //     scrollRef.current.scrollToIndex({index: index, animated: true});
+    //     setTimeout(() => {
+    //       setShow(true);
+    //     });
+    //   }
+    // }
   };
 
   const scroll = () => {
-    if (index < data.length - 1) {
-      scrollRef.current.scrollToIndex({index: index + 1, animated: true});
-      if (index === data.length - 2) {
+    if (autoPlayer) {
+      if (index < data.length - 1) {
+        scrollRef.current.scrollToIndex({index: index + 1, animated: true});
+        if (index === data.length - 2) {
+          stopAuto();
+          playAuto(250);
+        }
+      } else {
         stopAuto();
-        playAuto(250);
+        playAuto(2000);
+        setShow(false);
+        index = 0;
+        setShow(true);
       }
-    } else {
-      stopAuto();
-      playAuto(2000);
-      setShow(false);
-      index = 0;
-      setShow(true);
     }
   };
 
