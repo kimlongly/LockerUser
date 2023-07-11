@@ -16,11 +16,16 @@ import FONTS from '../../constants/FontsConstant';
 import FONTS_SIZE from '../../constants/FontSize';
 import {ICON_ASSETS} from '../../assets/IconAssets';
 import {DEVICE} from '../../utils/Device';
+
 export default function HomeHeader() {
   return (
     <View style={styles.headerContainer}>
       <View style={GlobalStyle.innerRow}>
-        <StatusBar translucent backgroundColor={'transparent'} />
+        <StatusBar
+          translucent
+          backgroundColor={'transparent'}
+          barStyle={'light-content'}
+        />
         <TouchableOpacity style={styles.profileContainer}>
           <FastImage
             source={{

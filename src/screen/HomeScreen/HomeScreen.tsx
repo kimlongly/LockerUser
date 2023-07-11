@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {ScrollView, StyleSheet, Text, View} from 'react-native';
 import {moderateScale} from 'react-native-size-matters';
 import {IMAGE_ASSETS} from '../../assets/ImageAssets';
 import SizedBox from '../../components/SizedBox';
@@ -12,7 +12,7 @@ import CurrentTracking from './components/CurrentTracking';
 import ServicesButton from './components/ServicesButton';
 export default function HomeScreen() {
   return (
-    <View style={GlobalStyle.container}>
+    <ScrollView style={GlobalStyle.container}>
       <Text style={styles.introduction}>Start Booking</Text>
       <SizedBox height={moderateScale(10)} />
       <CustomCarousel autoPlayer={false} />
@@ -28,16 +28,16 @@ export default function HomeScreen() {
         <ServicesButton
           image={IMAGE_ASSETS.Van}
           title={'Smart Logistic'}
-          description={'Deliver your package to wher you are'}
+          description={'Deliver your package to where you are'}
           available={100}
         />
       </View>
       <SizedBox height={moderateScale(10)} />
       <Text style={styles.introduction}>Tracking</Text>
       <SizedBox height={moderateScale(10)} />
-
       <CurrentTracking />
-    </View>
+      <SizedBox height={moderateScale(90)} />
+    </ScrollView>
   );
 }
 

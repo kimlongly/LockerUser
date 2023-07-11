@@ -175,7 +175,6 @@ const CurrentTracking = () => {
 
 const styles = StyleSheet.create({
   tracking: {
-    backgroundColor: COLORS.DARKCOMMONTEXT,
     alignSelf: 'center',
     borderRadius: moderateScale(10),
     width: DEVICE.SCREEN_WIDTH - moderateScale(20),

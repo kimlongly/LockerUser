@@ -8,7 +8,7 @@ import FONTS_SIZE from '../../../constants/FontSize';
 import FONTS from '../../../constants/FontsConstant';
 
 interface ServiceButtonProps {
-  image: string | undefined;
+  image: any;
   available?: string | number;
   title?: string;
   description?: string;

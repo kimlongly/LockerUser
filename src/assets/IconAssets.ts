@@ -7,6 +7,10 @@ import Bell from './icons/Bell.svg';
 import Flag from './icons/Flag.svg';
 import Tick from './icons/Tick.svg';
 import Locker from './icons/Locker.svg';
+import RightArrow from './icons/AccountScreen/RightArrow.svg';
+import Help from './icons/AccountScreen/Help.svg';
+import Language from './icons/AccountScreen/Language.svg';
+import PatchNotes from './icons/AccountScreen/PatchNotes.svg';
 export const ICON_ASSETS = {
   Home,
   Logo,
@@ -17,4 +21,8 @@ export const ICON_ASSETS = {
   Flag,
   Tick,
   Locker,
+  RightArrow,
+  Help,
+  Language,
+  PatchNotes,
 };
