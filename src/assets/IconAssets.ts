@@ -11,6 +11,9 @@ import RightArrow from './icons/AccountScreen/RightArrow.svg';
 import Help from './icons/AccountScreen/Help.svg';
 import Language from './icons/AccountScreen/Language.svg';
 import PatchNotes from './icons/AccountScreen/PatchNotes.svg';
+import PowerButton from './icons/AccountScreen/PowerButton.svg';
+import Cambodia from './icons/AccountScreen/CambodianFlag.svg';
+import America from './icons/AccountScreen/AmericanFlag.svg';
 export const ICON_ASSETS = {
   Home,
   Logo,
@@ -25,4 +28,7 @@ export const ICON_ASSETS = {
   Help,
   Language,
   PatchNotes,
+  PowerButton,
+  Cambodia,
+  America,
 };

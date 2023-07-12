@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   ImageBackground,
   StyleSheet,
@@ -11,64 +11,85 @@ import {moderateScale} from 'react-native-size-matters';
 import {ICON_ASSETS} from '../../assets/IconAssets';
 import {IMAGE_ASSETS} from '../../assets/ImageAssets';
 import SizedBox from '../../components/SizedBox';
+import ChangeLanguageModal from '../../components/modal/ChangeLanguageModal';
+import LogOutModal from '../../components/modal/LogOutModal';
 import COLORS from '../../constants/Colors';
 import FONTS_SIZE from '../../constants/FontSize';
 import FONTS from '../../constants/FontsConstant';
 import {DEVICE} from '../../utils/Device';
 import {GlobalStyle} from '../../utils/GlobalStyle';
 
-const services = [
-  {
-    id: '1',
-    title: 'Profile',
-    onPress: () => {},
-    icon: (
-      <ICON_ASSETS.Profile
-        height={moderateScale(25)}
-        width={moderateScale(25)}
-        fill={COLORS.WHITE}
-      />
-    ),
-  },
-  {
-    id: '2',
-    title: 'Change Language',
-    onPress: () => {},
-    icon: (
-      <ICON_ASSETS.Language
-        height={moderateScale(25)}
-        width={moderateScale(25)}
-        fill={COLORS.WHITE}
-      />
-    ),
-  },
-  {
-    id: '3',
-    title: 'Help',
-    onPress: () => {},
-    icon: (
-      <ICON_ASSETS.Help
-        height={moderateScale(25)}
-        width={moderateScale(25)}
-        fill={COLORS.WHITE}
-      />
-    ),
-  },
-  {
-    id: '4',
-    title: 'Patch Notes',
-    onPress: () => {},
-    icon: (
-      <ICON_ASSETS.PatchNotes
-        height={moderateScale(25)}
-        width={moderateScale(25)}
-        fill={COLORS.WHITE}
-      />
-    ),
-  },
-];
-
 export default function AccountScreen() {
+  const [logOutVisible, setLogOutVisible] = useState(false);
+  const [languageVisible, setLanguageVisible] = useState(false);
+
+  //================ Services ================ //
+  const services = [
+    {
+      id: '1',
+      title: 'Profile',
+      onPress: () => {},
+      icon: (
+        <ICON_ASSETS.Profile
+          height={moderateScale(25)}
+          width={moderateScale(25)}
+          fill={COLORS.WHITE}
+        />
+      ),
+    },
+    {
+      id: '2',
+      title: 'Change Language',
+      onPress: () => {
+        setLanguageVisible(true);
+      },
+      icon: (
+        <ICON_ASSETS.Language
+          height={moderateScale(25)}
+          width={moderateScale(25)}
+          fill={COLORS.WHITE}
+        />
+      ),
+    },
+    {
+      id: '3',
+      title: 'Help',
+      onPress: () => {},
+      icon: (
+        <ICON_ASSETS.Help
+          height={moderateScale(25)}
+          width={moderateScale(25)}
+          fill={COLORS.WHITE}
+        />
+      ),
+    },
+    {
+      id: '4',
+      title: 'Patch Notes',
+      onPress: () => {},
+      icon: (
+        <ICON_ASSETS.PatchNotes
+          height={moderateScale(25)}
+          width={moderateScale(25)}
+          fill={COLORS.WHITE}
+        />
+      ),
+    },
+    {
+      id: '5',
+      title: 'Log Out',
+      onPress: () => {
+        setLogOutVisible(true);
+      },
+      icon: (
+        <ICON_ASSETS.PowerButton
+          height={moderateScale(25)}
+          width={moderateScale(25)}
+          fill={COLORS.WHITE}
+        />
+      ),
+    },
+  ];
   // ============== render Service ============= //
   const renderService = (item: {
     id: string;
@@ -78,10 +99,11 @@ export default function AccountScreen() {
   }) => {
     return (
       <TouchableOpacity
+        onPress={item.onPress}
         style={[styles.options, GlobalStyle.rowView]}
         key={item.id}>
         <View style={GlobalStyle.innerRow}>
-          <View style={styles.iconContainer}>{item.icon}</View>
+          <View style={[styles.iconContainer]}>{item.icon}</View>
           <SizedBox width={moderateScale(10)} />
           <Text style={[styles.title]}>{item.title}</Text>
         </View>
@@ -92,6 +114,11 @@ export default function AccountScreen() {
 
   return (
     <View style={GlobalStyle.container}>
+      <LogOutModal visible={logOutVisible} setVisible={setLogOutVisible} />
+      <ChangeLanguageModal
+        visible={languageVisible}
+        setVisible={setLanguageVisible}
+      />
       <ImageBackground
         style={styles.upper}
         resizeMode="cover"
@@ -182,7 +209,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   title: {
-    color: COLORS.DARKCOMMONTEXT,
+    color: COLORS.BLACK,
     fontFamily: FONTS.MEDIUM,
     fontSize: FONTS_SIZE.font13,
   },
