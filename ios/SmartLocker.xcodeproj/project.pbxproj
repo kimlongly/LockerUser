@@ -12,13 +12,14 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		25DE352057EF4C7EBD744871 /* RobotoSlab-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 49F26AD762AE43FC9CC214E0 /* RobotoSlab-Regular.ttf */; };
-		373CBF7EA24A4B0FA3D16F25 /* RobotoSlab-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7267733EE634ACF9E9FCECD /* RobotoSlab-Medium.ttf */; };
-		67E2C705E8E54B90934DD930 /* RobotoSlab-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 67932B0ECE254276B7CBA4A6 /* RobotoSlab-Bold.ttf */; };
 		7699B88040F8A987B510C191 /* libPods-SmartLocker-SmartLockerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-SmartLocker-SmartLockerTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		B42E88EF7857407E840A7340 /* RobotoSlab-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 896F58A1941948508ECB890B /* RobotoSlab-SemiBold.ttf */; };
-		DFC7C9E78FDD42008569B4C3 /* RobotoSlab-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1CDC40CE0AD741108E79BBFA /* RobotoSlab-Light.ttf */; };
+		4AE84937453042FD93B2F8E4 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 00157E2310534DF681E88007 /* Poppins-Bold.ttf */; };
+		723D7C0F0B0F42759C4CADF4 /* Poppins-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A59A170290D547E2BC3B4F9A /* Poppins-ExtraBold.ttf */; };
+		5F86EBDFD16744BC82FEAE71 /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A676BCF3178A44C3B7426BCE /* Poppins-Light.ttf */; };
+		E33D490B81104F07A2661806 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 892E8D9F797643479A3913A7 /* Poppins-Medium.ttf */; };
+		1B17D7579FA9460E963AD73F /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84AB1B79404F4EA793FA9F48 /* Poppins-Regular.ttf */; };
+		EDA027DF0B5041EAB8137183 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D6F5E7573AB64A0BB8DD5289 /* Poppins-SemiBold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,18 +43,19 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = SmartLocker/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = SmartLocker/main.m; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-SmartLocker-SmartLockerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SmartLocker-SmartLockerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1CDC40CE0AD741108E79BBFA /* RobotoSlab-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "RobotoSlab-Light.ttf"; path = "../src/assets/fonts/RobotoSlab-Light.ttf"; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-SmartLocker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartLocker.debug.xcconfig"; path = "Target Support Files/Pods-SmartLocker/Pods-SmartLocker.debug.xcconfig"; sourceTree = "<group>"; };
-		49F26AD762AE43FC9CC214E0 /* RobotoSlab-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "RobotoSlab-Regular.ttf"; path = "../src/assets/fonts/RobotoSlab-Regular.ttf"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-SmartLocker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartLocker.release.xcconfig"; path = "Target Support Files/Pods-SmartLocker/Pods-SmartLocker.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-SmartLocker-SmartLockerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartLocker-SmartLockerTests.debug.xcconfig"; path = "Target Support Files/Pods-SmartLocker-SmartLockerTests/Pods-SmartLocker-SmartLockerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-SmartLocker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SmartLocker.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		67932B0ECE254276B7CBA4A6 /* RobotoSlab-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "RobotoSlab-Bold.ttf"; path = "../src/assets/fonts/RobotoSlab-Bold.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = SmartLocker/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		896F58A1941948508ECB890B /* RobotoSlab-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "RobotoSlab-SemiBold.ttf"; path = "../src/assets/fonts/RobotoSlab-SemiBold.ttf"; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-SmartLocker-SmartLockerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartLocker-SmartLockerTests.release.xcconfig"; path = "Target Support Files/Pods-SmartLocker-SmartLockerTests/Pods-SmartLocker-SmartLockerTests.release.xcconfig"; sourceTree = "<group>"; };
-		D7267733EE634ACF9E9FCECD /* RobotoSlab-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "RobotoSlab-Medium.ttf"; path = "../src/assets/fonts/RobotoSlab-Medium.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		00157E2310534DF681E88007 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; name = "Poppins-Bold.ttf"; path = "../src/assets/fonts/Poppins-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A59A170290D547E2BC3B4F9A /* Poppins-ExtraBold.ttf */ = {isa = PBXFileReference; name = "Poppins-ExtraBold.ttf"; path = "../src/assets/fonts/Poppins-ExtraBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A676BCF3178A44C3B7426BCE /* Poppins-Light.ttf */ = {isa = PBXFileReference; name = "Poppins-Light.ttf"; path = "../src/assets/fonts/Poppins-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		892E8D9F797643479A3913A7 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; name = "Poppins-Medium.ttf"; path = "../src/assets/fonts/Poppins-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		84AB1B79404F4EA793FA9F48 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; name = "Poppins-Regular.ttf"; path = "../src/assets/fonts/Poppins-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D6F5E7573AB64A0BB8DD5289 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; name = "Poppins-SemiBold.ttf"; path = "../src/assets/fonts/Poppins-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,11 +164,12 @@
 		F90CDCED6A2E498787940B42 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				67932B0ECE254276B7CBA4A6 /* RobotoSlab-Bold.ttf */,
-				1CDC40CE0AD741108E79BBFA /* RobotoSlab-Light.ttf */,
-				D7267733EE634ACF9E9FCECD /* RobotoSlab-Medium.ttf */,
-				49F26AD762AE43FC9CC214E0 /* RobotoSlab-Regular.ttf */,
-				896F58A1941948508ECB890B /* RobotoSlab-SemiBold.ttf */,
+				00157E2310534DF681E88007 /* Poppins-Bold.ttf */,
+				A59A170290D547E2BC3B4F9A /* Poppins-ExtraBold.ttf */,
+				A676BCF3178A44C3B7426BCE /* Poppins-Light.ttf */,
+				892E8D9F797643479A3913A7 /* Poppins-Medium.ttf */,
+				84AB1B79404F4EA793FA9F48 /* Poppins-Regular.ttf */,
+				D6F5E7573AB64A0BB8DD5289 /* Poppins-SemiBold.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -267,11 +270,12 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
-				67E2C705E8E54B90934DD930 /* RobotoSlab-Bold.ttf in Resources */,
-				DFC7C9E78FDD42008569B4C3 /* RobotoSlab-Light.ttf in Resources */,
-				373CBF7EA24A4B0FA3D16F25 /* RobotoSlab-Medium.ttf in Resources */,
-				25DE352057EF4C7EBD744871 /* RobotoSlab-Regular.ttf in Resources */,
-				B42E88EF7857407E840A7340 /* RobotoSlab-SemiBold.ttf in Resources */,
+				4AE84937453042FD93B2F8E4 /* Poppins-Bold.ttf in Resources */,
+				723D7C0F0B0F42759C4CADF4 /* Poppins-ExtraBold.ttf in Resources */,
+				5F86EBDFD16744BC82FEAE71 /* Poppins-Light.ttf in Resources */,
+				E33D490B81104F07A2661806 /* Poppins-Medium.ttf in Resources */,
+				1B17D7579FA9460E963AD73F /* Poppins-Regular.ttf in Resources */,
+				EDA027DF0B5041EAB8137183 /* Poppins-SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

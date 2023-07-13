@@ -14,6 +14,7 @@ import PatchNotes from './icons/AccountScreen/PatchNotes.svg';
 import PowerButton from './icons/AccountScreen/PowerButton.svg';
 import Cambodia from './icons/AccountScreen/CambodianFlag.svg';
 import America from './icons/AccountScreen/AmericanFlag.svg';
+import Camera from './icons/Camera.svg';
 export const ICON_ASSETS = {
   Home,
   Logo,
@@ -31,4 +32,5 @@ export const ICON_ASSETS = {
   PowerButton,
   Cambodia,
   America,
+  Camera,
 };

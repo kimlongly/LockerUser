@@ -1,9 +1,10 @@
 const FONTS = {
-  REGULAR: 'RobotoSlab-Regular',
-  MEDIUM: 'RobotoSlab-Medium',
-  SEMIBOLD: 'RobotoSlab-SemiBold',
-  BOLD: 'RobotoSlab-Bold',
-  LIGHT: 'RobotoSlab-Light',
+  REGULAR: 'Poppins-Regular',
+  MEDIUM: 'Poppins-Medium',
+  SEMIBOLD: 'Poppins-SemiBold',
+  BOLD: 'Poppins-Bold',
+  LIGHT: 'Poppins-Light',
+  EXTRABOLD: 'Poppins-ExtraBold',
 };
 
 export default FONTS;

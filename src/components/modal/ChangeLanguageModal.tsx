@@ -85,8 +85,10 @@ const ChangeLanguageModal = ({
       onBackdropPress={close}
       useNativeDriver={true}
       useNativeDriverForBackdrop={true}
-      animationIn={'zoomIn'}
-      animationOut={'zoomOut'}>
+      animationIn={'slideInUp'}
+      animationOut={'slideOutDown'}
+      animationInTiming={1000}
+      animationOutTiming={1000}>
       <View style={styles.container}>
         <Text style={styles.header}>Change Language</Text>
         <SizedBox height={moderateScale(20)} />
@@ -100,6 +102,8 @@ const ChangeLanguageModal = ({
 
 const styles = StyleSheet.create({
   container: {
+    bottom: 0,
+    position: 'absolute',
     backgroundColor: COLORS.BLACK,
     width: DEVICE.SCREEN_WIDTH - moderateScale(20),
     padding: moderateScale(10),

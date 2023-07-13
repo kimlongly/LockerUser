@@ -18,17 +18,23 @@ import FONTS_SIZE from '../../constants/FontSize';
 import FONTS from '../../constants/FontsConstant';
 import {DEVICE} from '../../utils/Device';
 import {GlobalStyle} from '../../utils/GlobalStyle';
+import NavigationHelper from '../../utils/NavigationHelper';
+import ScreenConstant from '../../constants/ScreenConstant';
 
 export default function AccountScreen() {
   const [logOutVisible, setLogOutVisible] = useState(false);
   const [languageVisible, setLanguageVisible] = useState(false);
+
+  const navigate = (name: string) => {
+    NavigationHelper.navigate({name: name});
+  };
 
   //================ Services ================ //
   const services = [
     {
       id: '1',
       title: 'Profile',
-      onPress: () => {},
+      onPress: () => navigate(ScreenConstant.Profile),
       icon: (
         <ICON_ASSETS.Profile
           height={moderateScale(25)}
@@ -54,7 +60,9 @@ export default function AccountScreen() {
     {
       id: '3',
       title: 'Help',
-      onPress: () => {},
+      onPress: () => {
+        navigate(ScreenConstant.Help);
+      },
       icon: (
         <ICON_ASSETS.Help
           height={moderateScale(25)}
@@ -66,7 +74,7 @@ export default function AccountScreen() {
     {
       id: '4',
       title: 'Patch Notes',
-      onPress: () => {},
+      onPress: () => navigate(ScreenConstant.PatchNote),
       icon: (
         <ICON_ASSETS.PatchNotes
           height={moderateScale(25)}
