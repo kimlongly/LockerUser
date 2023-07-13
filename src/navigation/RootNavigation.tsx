@@ -8,6 +8,9 @@ import SplashScreen from '../screen/SplashScreen/SplashScreen';
 import LoginScreen from '../screen/AuthenticationScreen/LoginScreen';
 import RegisterScreen from '../screen/AuthenticationScreen/RegisterScreen';
 import ResetPasswordScreen from '../screen/AuthenticationScreen/ResetPasswordScreen';
+import ProfileScreen from '../screen/ProfileScreen/ProfileScreen';
+import HelpScreen from '../screen/HelpScreen/HelpScreen';
+import PatchNoteScreen from '../screen/PatchNoteScreen/PatchNoteScreen';
 const Stack = createStackNavigator();
 
 export default function RootNavigation() {
@@ -50,6 +53,27 @@ export default function RootNavigation() {
           }}
           name={ScreenConstant.Auth.ResetPassword}
           component={ResetPasswordScreen}
+        />
+        <Stack.Screen
+          options={{
+            headerShown: false,
+          }}
+          name={ScreenConstant.Profile}
+          component={ProfileScreen}
+        />
+        <Stack.Screen
+          options={{
+            headerShown: false,
+          }}
+          name={ScreenConstant.Help}
+          component={HelpScreen}
+        />
+        <Stack.Screen
+          options={{
+            headerShown: false,
+          }}
+          name={ScreenConstant.PatchNote}
+          component={PatchNoteScreen}
         />
       </Stack.Navigator>
     </NavigationContainer>

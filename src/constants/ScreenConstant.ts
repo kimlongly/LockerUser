@@ -14,5 +14,8 @@ const ScreenConstant = {
     Report: 'Report',
     Account: 'Account',
   },
+  Profile: 'Profile',
+  Help: 'Help',
+  PatchNote: 'PatchNote',
 };
 export default ScreenConstant;
