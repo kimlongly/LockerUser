@@ -12,6 +12,7 @@ import BookingHistoryScreen from '../screen/BookingHistoryScreen/BookingHistoryS
 import HomeTabBarButton from '../components/HomeTabBarButton';
 import HomeHeader from '../components/header/HomeHeader';
 import {DEVICE} from '../utils/Device';
+import Header from '../components/header/Header';
 const Tabs = createBottomTabNavigator();
 export default function TabNavigation() {
   return (
@@ -36,7 +37,9 @@ export default function TabNavigation() {
         name={ScreenConstant.Tabs.Report}
         component={BookingHistoryScreen}
         options={{
-          headerShown: false,
+          header: () => (
+            <Header headerTitle="Booking History" hasBack={false} />
+          ),
           title: 'History',
           tabBarIcon: ({focused}) => (
             <CustomTabItem

@@ -4,37 +4,21 @@ import {
   createStackNavigator,
 } from '@react-navigation/stack';
 import React, {useRef} from 'react';
-import {navigationRef} from '../utils/NavigationHelper';
-import TabNavigation from './TabNavigation';
+import {Animated} from 'react-native';
+import Header from '../components/header/Header';
 import ScreenConstant from '../constants/ScreenConstant';
-import SplashScreen from '../screen/SplashScreen/SplashScreen';
 import LoginScreen from '../screen/AuthenticationScreen/LoginScreen';
 import RegisterScreen from '../screen/AuthenticationScreen/RegisterScreen';
 import ResetPasswordScreen from '../screen/AuthenticationScreen/ResetPasswordScreen';
-import ProfileScreen from '../screen/ProfileScreen/ProfileScreen';
+import ChangePasswordScreen from '../screen/ChangePasswordScreen/ChangePasswordScreen';
 import HelpScreen from '../screen/HelpScreen/HelpScreen';
 import PatchNoteScreen from '../screen/PatchNoteScreen/PatchNoteScreen';
-import {Animated} from 'react-native';
+import ProfileScreen from '../screen/ProfileScreen/ProfileScreen';
+import SplashScreen from '../screen/SplashScreen/SplashScreen';
+import {navigationRef} from '../utils/NavigationHelper';
+import TabNavigation from './TabNavigation';
 const Stack = createStackNavigator();
-const config = {
-  animation: 'spring',
-  config: {
-    stiffness: 1000,
-    damping: 500,
-    mass: 3,
-    overshootClamping: true,
-    restDisplacementThreshold: 0.01,
-    restSpeedThreshold: 0.01,
-  },
-};
 export default function RootNavigation() {
-  const animation = useRef(new Animated.Value(0)).current;
-  const forFade = ({current, next}: any) => {
-    console.log(current, next);
-    return {
-      cardStyle: {},
-    };
-  };
   return (
     <NavigationContainer ref={navigationRef}>
       <Stack.Navigator
@@ -105,7 +89,7 @@ export default function RootNavigation() {
         />
         <Stack.Screen
           options={{
-            headerShown: false,
+            header: () => <Header headerTitle="Help" />,
           }}
           name={ScreenConstant.Help}
           component={HelpScreen}
@@ -116,6 +100,13 @@ export default function RootNavigation() {
           }}
           name={ScreenConstant.PatchNote}
           component={PatchNoteScreen}
+        />
+        <Stack.Screen
+          options={{
+            header: () => <Header headerTitle="Change Password" />,
+          }}
+          name={ScreenConstant.ChangePassword}
+          component={ChangePasswordScreen}
         />
       </Stack.Navigator>
     </NavigationContainer>

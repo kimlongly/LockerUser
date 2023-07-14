@@ -3,6 +3,7 @@ import {
   Easing,
   KeyboardAvoidingView,
   Platform,
+  StatusBar,
   StyleSheet,
   Text,
   TouchableOpacity,
@@ -103,6 +104,7 @@ export default function LoginScreen() {
 
   return (
     <View style={[GlobalStyle.container, styles.container]}>
+      <StatusBar translucent backgroundColor={'transparent'} />
       <Checker />
       <KeyboardAvoidingView
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>

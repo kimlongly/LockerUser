@@ -20,6 +20,7 @@ import {ICON_ASSETS} from '../../assets/IconAssets';
 import FastImage from 'react-native-fast-image';
 import Input from '../../components/input/Input';
 import Button from '../../components/button/Button';
+import NavigationHelper from '../../utils/NavigationHelper';
 
 export default function ProfileScreen() {
   const [fullName, setFullName] = useState('');
@@ -36,7 +37,11 @@ export default function ProfileScreen() {
         style={styles.profileContainer}
         blurRadius={5}>
         <View style={GlobalStyle.rowView}>
-          <TouchableOpacity style={styles.backContainer}>
+          <TouchableOpacity
+            style={styles.backContainer}
+            onPress={() => {
+              NavigationHelper.back();
+            }}>
             <ICON_ASSETS.RightArrow fill={COLORS.BLACK} />
           </TouchableOpacity>
           <Text style={styles.headerText}>Profile</Text>

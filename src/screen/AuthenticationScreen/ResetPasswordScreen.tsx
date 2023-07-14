@@ -18,6 +18,7 @@ import FONTS from '../../constants/FontsConstant';
 import FONTS_SIZE from '../../constants/FontSize';
 import Button from '../../components/button/Button';
 import NavigationHelper from '../../utils/NavigationHelper';
+import Checker from '../../components/background/Checker';
 export default function ResetPasswordScreen() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -80,6 +81,7 @@ export default function ResetPasswordScreen() {
 
   return (
     <View style={[GlobalStyle.container, styles.container]}>
+      <Checker />
       <View style={styles.content}>
         <SizedBox height={moderateScale(0)} />
         <SizedBox height={moderateScale(50)} />

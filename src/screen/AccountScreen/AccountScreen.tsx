@@ -59,6 +59,20 @@ export default function AccountScreen() {
     },
     {
       id: '3',
+      title: 'Change Password',
+      onPress: () => {
+        navigate(ScreenConstant.ChangePassword);
+      },
+      icon: (
+        <ICON_ASSETS.PadLock
+          height={moderateScale(25)}
+          width={moderateScale(25)}
+          fill={COLORS.WHITE}
+        />
+      ),
+    },
+    {
+      id: '4',
       title: 'Help',
       onPress: () => {
         navigate(ScreenConstant.Help);
@@ -71,20 +85,20 @@ export default function AccountScreen() {
         />
       ),
     },
+    // {
+    //   id: '5',
+    //   title: 'Patch Notes',
+    //   onPress: () => navigate(ScreenConstant.PatchNote),
+    //   icon: (
+    //     <ICON_ASSETS.PatchNotes
+    //       height={moderateScale(25)}
+    //       width={moderateScale(25)}
+    //       fill={COLORS.WHITE}
+    //     />
+    //   ),
+    // },
     {
-      id: '4',
-      title: 'Patch Notes',
-      onPress: () => navigate(ScreenConstant.PatchNote),
-      icon: (
-        <ICON_ASSETS.PatchNotes
-          height={moderateScale(25)}
-          width={moderateScale(25)}
-          fill={COLORS.WHITE}
-        />
-      ),
-    },
-    {
-      id: '5',
+      id: '6',
       title: 'Log Out',
       onPress: () => {
         setLogOutVisible(true);

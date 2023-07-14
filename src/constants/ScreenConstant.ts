@@ -17,5 +17,6 @@ const ScreenConstant = {
   Profile: 'Profile',
   Help: 'Help',
   PatchNote: 'PatchNote',
+  ChangePassword: 'ChangePassword',
 };
 export default ScreenConstant;
