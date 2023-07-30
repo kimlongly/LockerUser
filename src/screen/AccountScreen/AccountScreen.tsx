@@ -20,6 +20,7 @@ import {DEVICE} from '../../utils/Device';
 import {GlobalStyle} from '../../utils/GlobalStyle';
 import NavigationHelper from '../../utils/NavigationHelper';
 import ScreenConstant from '../../constants/ScreenConstant';
+import DatePickerModal from '../../components/modal/DatePickerModal';
 
 export default function AccountScreen() {
   const [logOutVisible, setLogOutVisible] = useState(false);
@@ -136,7 +137,8 @@ export default function AccountScreen() {
 
   return (
     <View style={GlobalStyle.container}>
-      <LogOutModal visible={logOutVisible} setVisible={setLogOutVisible} />
+      <DatePickerModal visible={logOutVisible} setVisible={setLogOutVisible} />
+      {/* <LogOutModal visible={logOutVisible} setVisible={setLogOutVisible} /> */}
       <ChangeLanguageModal
         visible={languageVisible}
         setVisible={setLanguageVisible}
