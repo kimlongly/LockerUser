@@ -5,7 +5,7 @@
   "scripts": {
     "android": "react-native run-android",
     "build:apk": "cd android && ./gradlew clean && ./gradlew assembleRelease && cd ..",
-    "asset":"npx react-native-asset",
+    "asset": "npx react-native-asset",
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
@@ -14,6 +14,7 @@
   "dependencies": {
     "@react-native-community/async-storage": "^1.12.1",
     "@react-navigation/bottom-tabs": "^6.4.1",
+    "@react-navigation/material-top-tabs": "^6.6.2",
     "@react-navigation/native": "^6.0.13",
     "@react-navigation/stack": "^6.3.5",
     "@types/react-native-snap-carousel": "^3.8.5",
@@ -34,6 +35,7 @@
     "react-native-svg": "^12.4.0",
     "react-native-svg-transformer": "^1.0.0",
     "react-native-switch-toggle": "^2.2.1",
+    "react-native-tab-view": "^3.5.2",
     "react-redux": "^8.0.5",
     "redux": "^4.2.0",
     "redux-thunk": "^2.4.2"
