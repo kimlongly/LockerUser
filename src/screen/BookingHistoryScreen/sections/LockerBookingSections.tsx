@@ -1,5 +1,5 @@
 import React from 'react';
-import {FlatList, StyleSheet, View} from 'react-native';
+import {FlatList, View} from 'react-native';
 import {moderateScale} from 'react-native-size-matters';
 import SizedBox from '../../../components/SizedBox';
 import {temporaryData} from '../../../utils/Data';
@@ -15,7 +15,7 @@ export default function LockerBookingSections() {
 
   const renderHeader = () => <SizedBox height={moderateScale(10)} />;
   const renderItemSeparator = () => <SizedBox height={moderateScale(10)} />;
-  const renderFooter = () => <SizedBox height={moderateScale(10)} />;
+  const renderFooter = () => <SizedBox height={moderateScale(90)} />;
 
   return (
     <View style={GlobalStyle.container}>
@@ -30,5 +30,3 @@ export default function LockerBookingSections() {
     </View>
   );
 }
-
-const styles = StyleSheet.create({});

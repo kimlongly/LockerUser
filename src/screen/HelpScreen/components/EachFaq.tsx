@@ -1,25 +1,21 @@
+import React, {useState} from 'react';
 import {
-  Animated,
-  Easing,
   LayoutAnimation,
   StyleSheet,
   Text,
   TouchableOpacity,
   View,
 } from 'react-native';
-import React, {useRef, useState} from 'react';
-import {DEVICE} from '../../../utils/Device';
 import {moderateScale} from 'react-native-size-matters';
-import COLORS from '../../../constants/Colors';
-import {GlobalStyle} from '../../../utils/GlobalStyle';
 import {ICON_ASSETS} from '../../../assets/IconAssets';
-import FONTS from '../../../constants/FontsConstant';
-import FONTS_SIZE from '../../../constants/FontSize';
 import SizedBox from '../../../components/SizedBox';
-import {duration} from 'moment';
+import COLORS from '../../../constants/Colors';
+import FONTS_SIZE from '../../../constants/FontSize';
+import FONTS from '../../../constants/FontsConstant';
+import {DEVICE} from '../../../utils/Device';
+import {GlobalStyle} from '../../../utils/GlobalStyle';
 
 export default function EachFaq() {
-  const animation = useRef(new Animated.Value(0)).current;
   const [show, setShow] = useState(false);
 
   return (

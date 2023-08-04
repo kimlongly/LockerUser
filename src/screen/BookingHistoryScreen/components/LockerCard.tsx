@@ -1,19 +1,19 @@
-import {StyleSheet, Text, View} from 'react-native';
+import moment from 'moment';
 import React from 'react';
-import COLORS from '../../../constants/Colors';
+import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {moderateScale} from 'react-native-size-matters';
-import {DEVICE} from '../../../utils/Device';
-import {GlobalStyle} from '../../../utils/GlobalStyle';
 import {ICON_ASSETS} from '../../../assets/IconAssets';
 import SizedBox from '../../../components/SizedBox';
+import COLORS from '../../../constants/Colors';
 import FONTS_SIZE from '../../../constants/FontSize';
 import FONTS from '../../../constants/FontsConstant';
-import moment from 'moment';
+import {DEVICE} from '../../../utils/Device';
+import {GlobalStyle} from '../../../utils/GlobalStyle';
 
 export default function LockerCard({item}: any) {
   return (
-    <View style={styles.cardContainer}>
-      <View style={[GlobalStyle.rowView]}>
+    <TouchableOpacity style={styles.cardContainer} activeOpacity={0.8}>
+      <View style={[GlobalStyle.rowView, GlobalStyle.paddingHorizontal10]}>
         <View style={GlobalStyle.innerRow}>
           <View style={styles.iconContainer}>
             <ICON_ASSETS.Locker
@@ -48,7 +48,17 @@ export default function LockerCard({item}: any) {
           </Text>
         </View>
       </View>
-    </View>
+      <View style={[GlobalStyle.rowView, GlobalStyle.paddingHorizontal10]}>
+        <Text style={styles.bookingCode}>Locker XXL</Text>
+        <Text style={styles.bookingCode}>
+          Expired: {moment().add(2, 'days').format('DD-MMM-YYYY')}
+        </Text>
+      </View>
+      <View style={[GlobalStyle.rowView, GlobalStyle.paddingHorizontal10]}>
+        <Text style={styles.dateCode}>2 days</Text>
+        <Text style={[styles.bookingCode, {color: COLORS.SUCCESS}]}>2$</Text>
+      </View>
+    </TouchableOpacity>
   );
 }
 
@@ -56,7 +66,7 @@ const styles = StyleSheet.create({
   cardContainer: {
     borderRadius: moderateScale(15),
     backgroundColor: COLORS.WHITE,
-    padding: moderateScale(10),
+    paddingVertical: moderateScale(10),
     width: DEVICE.SCREEN_WIDTH - moderateScale(20),
     alignSelf: 'center',
   },

@@ -1,5 +1,6 @@
 import {StyleSheet} from 'react-native';
 import COLORS from '../constants/Colors';
+import {moderateScale} from 'react-native-size-matters';
 export const GlobalStyle = StyleSheet.create({
   container: {
     backgroundColor: COLORS.BLACK,
@@ -13,5 +14,8 @@ export const GlobalStyle = StyleSheet.create({
   innerRow: {
     flexDirection: 'row',
     alignItems: 'center',
+  },
+  paddingHorizontal10: {
+    paddingHorizontal: moderateScale(10),
   },
 });
